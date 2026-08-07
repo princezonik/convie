@@ -10,7 +10,7 @@ services:
     working_dir: /var/www
 
     volumes:
-      - ./app:/var/www
+      - ./convie:/var/www
 
     networks:
       - laravel
@@ -24,7 +24,7 @@ services:
       - "8000:80"
 
     volumes:
-      - ./app:/var/www
+      - ./convie:/var/www
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
 
     depends_on:
@@ -44,7 +44,7 @@ services:
       MYSQL_DATABASE: convie
       MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: convie
-      MYSQL_PASSWORD: convie
+      MYSQL_PASSWORD: password
 
     ports:
       - "3306:3306"
