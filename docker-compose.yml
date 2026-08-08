@@ -66,8 +66,48 @@ services:
     networks:
       - laravel
 
+  auth_mysql:
+    image: mysql:8.4
+
+    container_name: auth_mysql
+
+    restart: unless-stopped
+
+    environment:
+      MYSQL_DATABASE: auth
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: auth
+      MYSQL_PASSWORD: auth
+
+    ports:
+      - "3307:3306"
+
+    volumes:
+      - auth_mysql_data:/var/lib/mysql
+
+    networks:
+      - laravel
+
+  auth:
+    build:
+      context: ./services/auth-service
+      dockerfile: Dockerfile
+
+    container_name: auth_service
+
+    working_dir: /var/www
+
+    volumes:
+      - ./services/auth-service:/var/www
+
+    depends_on:
+      - auth_mysql
+
+    networks:
+      - laravel
 volumes:
   mysql_data:
+  auth_mysql_data:
 
 networks:
   laravel:
