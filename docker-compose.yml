@@ -25,6 +25,7 @@ services:
 
     volumes:
       - ./convie:/var/www
+      - ./services/auth-service:/var/www/auth-service
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
 
     depends_on:
