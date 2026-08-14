@@ -106,9 +106,41 @@ services:
 
     networks:
       - laravel
+
+  user:
+    build:
+      context: ./services/user-service
+      dockerfile: Dockerfile
+    container_name: user_service
+    working_dir: /var/www
+    volumes:
+      - ./services/user-service:/var/www
+    depends_on:
+      - user_mysql
+    networks:
+      - laravel
+
+  user_mysql:
+    image: mysql:8.4
+    container_name: user_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: user
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3308:3306"
+    volumes:
+      - user_mysql_data:/var/lib/mysql
+    networks:
+      - laravel
+
+
 volumes:
   mysql_data:
   auth_mysql_data:
+  user_mysql_data:
 
 networks:
   laravel:

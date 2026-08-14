@@ -24,3 +24,5 @@ Route::get('/internal/auth/validate', [
         'validateToken',
     ]);
 });
+
+
