@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'internal_service_key' => env('INTERNAL_SERVICE_KEY'),
+
+    'auth_service_url' => env(
+        'AUTH_SERVICE_URL',
+        'http://auth_service'
+    ),
 ];
