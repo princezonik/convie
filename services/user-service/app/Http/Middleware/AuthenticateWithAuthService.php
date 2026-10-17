@@ -20,7 +20,7 @@ class AuthenticateWithAuthService
         }
 
         try {
-            $response = Http::withHeaders([
+            $response = Http::timeout(config('services.auth_service_timeout', 3))->withHeaders([
                 'X-Service-Key' => config('services.internal_service_key'),
                 'Authorization' => 'Bearer ' . $token,
                 'Accept' => 'application/json',
@@ -28,8 +28,19 @@ class AuthenticateWithAuthService
                 config('services.auth_service_url') . '/api/internal/auth/validate'
             );
         } catch (\Throwable $e) {
+            report($e);
+
             return response()->json([
                 'message' => 'Authentication service unavailable.',
+            ], 503);
+        }
+
+        if ($response->status() === 401 && $response->json('message') === 'Unauthorized service.') {
+            // Our X-Service-Key was rejected: a config problem, not the caller's fault.
+            logger()->error('auth-service rejected INTERNAL_SERVICE_KEY from user-service.');
+
+            return response()->json([
+                'message' => 'Authentication service error.',
             ], 503);
         }
 

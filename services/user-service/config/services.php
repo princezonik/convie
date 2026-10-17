@@ -37,8 +37,8 @@ return [
 
     'internal_service_key' => env('INTERNAL_SERVICE_KEY'),
 
-    'auth_service_url' => env(
-        'AUTH_SERVICE_URL',
-        'http://auth_service'
-    ),
+    // Reach auth-service through nginx: the auth container only speaks FastCGI.
+    'auth_service_url' => env('AUTH_SERVICE_URL', 'http://nginx'),
+
+    'auth_service_timeout' => (int) env('AUTH_SERVICE_TIMEOUT', 3),
 ];

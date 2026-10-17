@@ -17,13 +17,9 @@ class UserController extends Controller
             ], 401);
         }
 
-        $profile = UserProfile::where('user_id', $userId)->first();
-
-        if (!$profile) {
-            return response()->json([
-                'message' => 'User profile not found.',
-            ], 404);
-        }
+        // Profiles are created lazily: auth-service owns registration and
+        // doesn't notify this service, so a new user has no row yet.
+        $profile = UserProfile::firstOrCreate(['user_id' => $userId]);
 
         return response()->json([
             'id' => $profile->user_id,
