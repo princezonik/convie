@@ -17,5 +17,28 @@
   ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'cv-grid-4'},h(C.ProductCard,{name:'Hand-dyed adire throw',vendor:'Adire Atelier',origin:'Lagos',minor:4820,currency:'GBP',baseMinor:9800000,baseCurrency:'NGN',rating:'4.8',reviews:126,art:'c'}),h(C.ProductCard,{name:'Kente stole, single weave',vendor:'Bonwire Loom Co.',origin:'Kumasi',minor:3650,currency:'GBP',baseMinor:72500,baseCurrency:'GHS',rating:'4.9',reviews:58,art:'b',badge:'new-vendor'}),h(C.ProductCard,{name:'Kiondo sisal basket',vendor:'Nairobi Weavers',origin:'Nairobi',minor:2240,currency:'GBP',baseMinor:380000,baseCurrency:'KES',rating:'4.7',reviews:203,art:'a'}),h(C.ProductCard,{name:'Shea body butter, 500 g',vendor:'Tamale Naturals',origin:'Tamale',minor:1490,currency:'GBP',baseMinor:29500,baseCurrency:'GHS',rating:'4.6',reviews:411,art:'d'})));
 </script>
 
+<script>(function(){
+  function go(n){ if(n) location.href = n + ".html"; }
+  document.addEventListener("click", function(e){
+    var el = e.target.closest("[data-next]"); if(!el || el.tagName === "FORM") return;
+    if (el.closest("form[data-next]") && el.type === "submit") return;
+    e.preventDefault(); go(el.getAttribute("data-next"));
+  });
+  document.addEventListener("submit", function(e){ var f = e.target.closest("form[data-next]"); if(f){ e.preventDefault(); go(f.getAttribute("data-next")); } });
+  document.querySelectorAll(".cv-otp").forEach(function(g){
+    var ins = g.querySelectorAll("input");
+    ins.forEach(function(inp, i){
+      inp.removeAttribute("maxlength");
+      inp.addEventListener("input", function(){
+        var d = inp.value.replace(/\D/g, "");
+        if (d.length > 1) { for (var j = 0; j < d.length && i + j < ins.length; j++) ins[i + j].value = d[j]; (ins[Math.min(i + d.length, ins.length - 1)]).focus(); return; }
+        inp.value = d; if (d && ins[i+1]) ins[i+1].focus();
+      });
+      inp.addEventListener("keydown", function(e){ if(e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); });
+      inp.addEventListener("paste", function(e){ var d = (e.clipboardData.getData("text") || "").replace(/\D/g, ""); if(!d) return; e.preventDefault(); ins.forEach(function(x, j){ x.value = d[j] || ""; }); (ins[Math.min(d.length, ins.length) - 1] || inp).focus(); });
+    });
+    if (ins[0] && !ins[0].value) ins[0].focus();
+  });
+})();</script>
 </body>
 </html>

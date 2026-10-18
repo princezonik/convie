@@ -21,5 +21,28 @@
 <div class="cv-card cv-card-flush"><table class="cv-table"><thead><tr><th>Break</th><th>Gateway</th><th>Reference</th><th class="cv-r">Ledger</th><th class="cv-r">Gateway</th><th class="cv-r">Difference</th><th>Age</th><th>Status</th><th></th></tr></thead><tbody><tr class="cv-flag"><td><span class="cv-mono">BRK-1017-01</span></td><td>Flutterwave</td><td><span class="cv-mono">FLW-TX-55129</span></td><td class="cv-r cv-num">Ksh 4,128.00</td><td class="cv-r cv-num">—</td><td class="cv-r cv-num">Ksh 4,128.00</td><td>31 h</td><td><span class="cv-pill cv-pill-danger"><i data-icon="alert"></i>Missing in report</span></td><td><button class="cv-btn cv-btn-secondary cv-btn-sm">Investigate</button></td></tr><tr class="cv-flag"><td><span class="cv-mono">BRK-1017-02</span></td><td>Flutterwave</td><td><span class="cv-mono">FLW-TX-55340</span></td><td class="cv-r cv-num">£96.40</td><td class="cv-r cv-num">£94.80</td><td class="cv-r cv-num">£1.60</td><td>26 h</td><td><span class="cv-pill cv-pill-danger"><i data-icon="alert"></i>Amount mismatch</span></td><td><button class="cv-btn cv-btn-secondary cv-btn-sm">Investigate</button></td></tr><tr><td><span class="cv-mono">BRK-1016-07</span></td><td>Paystack</td><td><span class="cv-mono">PSK_trf_9x2k</span></td><td class="cv-r cv-num">₦408,000.00</td><td class="cv-r cv-num">₦408,000.00</td><td class="cv-r cv-num">₦0.00</td><td>—</td><td><span class="cv-pill cv-pill-success"><i data-icon="check"></i>Resolved</span></td><td><a class="cv-link cv-small">View</a></td></tr></tbody></table><div class="cv-table-foot">Breaks unresolved after 48 hours page the finance on-call.</div></div></div></div></div>
 <script>window.Convie.hydrateIcons(document);</script>
 
+<script>(function(){
+  function go(n){ if(n) location.href = n + ".html"; }
+  document.addEventListener("click", function(e){
+    var el = e.target.closest("[data-next]"); if(!el || el.tagName === "FORM") return;
+    if (el.closest("form[data-next]") && el.type === "submit") return;
+    e.preventDefault(); go(el.getAttribute("data-next"));
+  });
+  document.addEventListener("submit", function(e){ var f = e.target.closest("form[data-next]"); if(f){ e.preventDefault(); go(f.getAttribute("data-next")); } });
+  document.querySelectorAll(".cv-otp").forEach(function(g){
+    var ins = g.querySelectorAll("input");
+    ins.forEach(function(inp, i){
+      inp.removeAttribute("maxlength");
+      inp.addEventListener("input", function(){
+        var d = inp.value.replace(/\D/g, "");
+        if (d.length > 1) { for (var j = 0; j < d.length && i + j < ins.length; j++) ins[i + j].value = d[j]; (ins[Math.min(i + d.length, ins.length - 1)]).focus(); return; }
+        inp.value = d; if (d && ins[i+1]) ins[i+1].focus();
+      });
+      inp.addEventListener("keydown", function(e){ if(e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); });
+      inp.addEventListener("paste", function(e){ var d = (e.clipboardData.getData("text") || "").replace(/\D/g, ""); if(!d) return; e.preventDefault(); ins.forEach(function(x, j){ x.value = d[j] || ""; }); (ins[Math.min(d.length, ins.length) - 1] || inp).focus(); });
+    });
+    if (ins[0] && !ins[0].value) ins[0].focus();
+  });
+})();</script>
 </body>
 </html>

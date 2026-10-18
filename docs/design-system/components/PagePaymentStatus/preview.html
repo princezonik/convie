@@ -3,12 +3,12 @@
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>Payment verification and confirmation</title></head>
 <body>
-<header class="cv-topnav"><a class="cv-wordmark" href="#">convie</a>
+<header class="cv-topnav"><a class="cv-wordmark" href="#" data-next="PageHome">convie</a>
 <div class="cv-search" role="search"><i data-icon="search" data-size="sm"></i><span>Search products, vendors and categories</span></div>
 <div class="cv-topnav-actions"><span class="cv-locale"><i data-icon="globe" data-size="sm"></i>UK · GBP</span>
 <button class="cv-btn cv-btn-ghost"><i data-icon="store"></i>Sell on Convie</button>
-<button class="cv-btn cv-btn-ghost"><i data-icon="user"></i>Amara</button>
-<button class="cv-btn cv-btn-ghost cv-cart-btn" aria-label="Cart"><i data-icon="cart"></i><span class="cv-cart-count">4</span></button></div></header><main class="cv-page">
+<button class="cv-btn cv-btn-ghost" data-next="PageOrders"><i data-icon="user"></i>Amara</button>
+<button class="cv-btn cv-btn-ghost cv-cart-btn" data-next="PageCart" aria-label="Cart"><i data-icon="cart"></i><span class="cv-cart-count">4</span></button></div></header><main class="cv-page">
 <div class="cv-grid-2" style="gap:32px">
  <div class="cv-card" style="text-align:center;padding:48px 32px;display:flex;flex-direction:column;align-items:center;gap:16px">
   <div class="cv-overline">While we verify</div>
@@ -25,7 +25,7 @@
    <div class="cv-row" style="justify-content:space-between;padding:14px 16px;border-radius:var(--radius-md);background:var(--surface-sunken)"><div><div style="font-weight:600">Bonwire Loom Co. · 1 item</div><div class="cv-small cv-muted">Sub-order <span class="cv-mono">CNV-24-08813-B</span></div></div><span class="cv-pill cv-pill-warning"><i data-icon="package"></i>Preparing</span></div>
   </div>
   <p class="cv-small cv-muted" style="margin:0">Each vendor ships separately and adds tracking. We hold your payment until you confirm delivery or 5 days after it arrives.</p>
-  <div class="cv-row"><button class="cv-btn cv-btn-primary">View order</button><button class="cv-btn cv-btn-secondary">Keep shopping</button></div>
+  <div class="cv-row"><button class="cv-btn cv-btn-primary" data-next="PageOrderDetail">View order</button><button class="cv-btn cv-btn-secondary" data-next="PageHome">Keep shopping</button></div>
  </div>
 </div>
 <div style="margin-top:32px"><div class="cv-alert cv-alert-danger"><i data-icon="alert"></i><div><div class="cv-alert-title">Payment not completed: your card was declined by the issuer.</div>No money was taken. Your rate is still locked for 9:40. Try another card or pay with Apple Pay. <a class='cv-link'>Try again</a></div></div></div>

@@ -20,5 +20,28 @@
 <div class="cv-card cv-card-flush"><table class="cv-table"><thead><tr><th>Entry</th><th>Time</th><th>Account</th><th>Type</th><th class="cv-r">Debit</th><th class="cv-r">Credit</th><th>Ccy</th><th>Reference</th></tr></thead><tbody><tr><td><span class="cv-mono">LDG-7f3a91</span></td><td>09:13:01</td><td>gateway_clearing:flutterwave</td><td>capture</td><td class="cv-r cv-num">18,516</td><td class="cv-r cv-num"></td><td>GBP</td><td><span class="cv-mono">FLW-MOCK-88a1c2</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a92</span></td><td>09:13:01</td><td>buyer_payable</td><td>capture</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">18,516</td><td>GBP</td><td><span class="cv-mono">CNV-24-08813</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a93</span></td><td>09:13:01</td><td>vendor_pending:adire-atelier</td><td>vendor_share</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">17,848,000</td><td>NGN</td><td><span class="cv-mono">CNV-24-08813-A</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a94</span></td><td>09:13:01</td><td>revenue:commission</td><td>commission</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">1,552,000</td><td>NGN</td><td><span class="cv-mono">CNV-24-08813-A</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a95</span></td><td>09:13:01</td><td>vendor_pending:bonwire-loom</td><td>vendor_share</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">66,700</td><td>GHS</td><td><span class="cv-mono">CNV-24-08813-B</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a96</span></td><td>09:13:01</td><td>fx_position:GBP-NGN</td><td>fx_conversion</td><td class="cv-r cv-num">9,540</td><td class="cv-r cv-num"></td><td>GBP</td><td><span class="cv-mono">RT-2610-0912</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a97</span></td><td>09:13:01</td><td>expense:gateway_fees</td><td>gateway_fee</td><td class="cv-r cv-num">278</td><td class="cv-r cv-num"></td><td>GBP</td><td><span class="cv-mono">FLW-MOCK-88a1c2</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a98</span></td><td>09:13:01</td><td>tax_payable:UK-VAT</td><td>tax</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">3,086</td><td>GBP</td><td><span class="cv-mono">CNV-24-08813</span></td></tr></tbody></table><div class="cv-table-foot">Amounts in minor units. Entries balance per currency per transaction.</div></div></div></div></div>
 <script>window.Convie.hydrateIcons(document);</script>
 
+<script>(function(){
+  function go(n){ if(n) location.href = n + ".html"; }
+  document.addEventListener("click", function(e){
+    var el = e.target.closest("[data-next]"); if(!el || el.tagName === "FORM") return;
+    if (el.closest("form[data-next]") && el.type === "submit") return;
+    e.preventDefault(); go(el.getAttribute("data-next"));
+  });
+  document.addEventListener("submit", function(e){ var f = e.target.closest("form[data-next]"); if(f){ e.preventDefault(); go(f.getAttribute("data-next")); } });
+  document.querySelectorAll(".cv-otp").forEach(function(g){
+    var ins = g.querySelectorAll("input");
+    ins.forEach(function(inp, i){
+      inp.removeAttribute("maxlength");
+      inp.addEventListener("input", function(){
+        var d = inp.value.replace(/\D/g, "");
+        if (d.length > 1) { for (var j = 0; j < d.length && i + j < ins.length; j++) ins[i + j].value = d[j]; (ins[Math.min(i + d.length, ins.length - 1)]).focus(); return; }
+        inp.value = d; if (d && ins[i+1]) ins[i+1].focus();
+      });
+      inp.addEventListener("keydown", function(e){ if(e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); });
+      inp.addEventListener("paste", function(e){ var d = (e.clipboardData.getData("text") || "").replace(/\D/g, ""); if(!d) return; e.preventDefault(); ins.forEach(function(x, j){ x.value = d[j] || ""; }); (ins[Math.min(d.length, ins.length) - 1] || inp).focus(); });
+    });
+    if (ins[0] && !ins[0].value) ins[0].focus();
+  });
+})();</script>
 </body>
 </html>

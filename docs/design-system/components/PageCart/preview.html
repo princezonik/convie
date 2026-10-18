@@ -3,12 +3,12 @@
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>Cart grouped by vendor</title></head>
 <body>
-<header class="cv-topnav"><a class="cv-wordmark" href="#">convie</a>
+<header class="cv-topnav"><a class="cv-wordmark" href="#" data-next="PageHome">convie</a>
 <div class="cv-search" role="search"><i data-icon="search" data-size="sm"></i><span>Search products, vendors and categories</span></div>
 <div class="cv-topnav-actions"><span class="cv-locale"><i data-icon="globe" data-size="sm"></i>UK · GBP</span>
 <button class="cv-btn cv-btn-ghost"><i data-icon="store"></i>Sell on Convie</button>
-<button class="cv-btn cv-btn-ghost"><i data-icon="user"></i>Amara</button>
-<button class="cv-btn cv-btn-ghost cv-cart-btn" aria-label="Cart"><i data-icon="cart"></i><span class="cv-cart-count">4</span></button></div></header><main class="cv-page">
+<button class="cv-btn cv-btn-ghost" data-next="PageOrders"><i data-icon="user"></i>Amara</button>
+<button class="cv-btn cv-btn-ghost cv-cart-btn" data-next="PageCart" aria-label="Cart"><i data-icon="cart"></i><span class="cv-cart-count">4</span></button></div></header><main class="cv-page">
 <div class="cv-pagehead" style="margin-bottom:24px"><div><h1 class="cv-h1">Your cart</h1><div class="cv-muted">4 items from 2 vendors. Each vendor ships separately.</div></div></div>
 <div class="cv-split">
  <div class="cv-stack" style="gap:20px">
@@ -23,7 +23,7 @@
  </div>
  <aside class="cv-card cv-sticky"><h2 class="cv-h2" style="margin-bottom:16px">Order summary</h2>
   <div class="cv-summary"><div class="cv-summary-row"><span>Subtotal, 4 items</span><span>£131.90</span></div><div class="cv-summary-row"><span class="cv-muted">Shipping · Adire Atelier</span><span>£12.50</span></div><div class="cv-summary-row"><span class="cv-muted">Shipping · Bonwire Loom Co.</span><span>£9.90</span></div><div class="cv-summary-row"><span class="cv-muted">UK VAT</span><span>Calculated at checkout</span></div><div class="cv-summary-row cv-summary-total"><span>Total</span><span>£154.30</span></div><div class="cv-small cv-muted">Before VAT. Includes a 1.5% currency conversion.</div></div>
-  <button class="cv-btn cv-btn-primary cv-btn-lg cv-btn-block" style="margin-top:20px">Checkout<i data-icon="arrow"></i></button>
+  <button class="cv-btn cv-btn-primary cv-btn-lg cv-btn-block" style="margin-top:20px" data-next="PageCheckout">Checkout<i data-icon="arrow"></i></button>
   <div class="cv-row cv-small cv-muted" style="margin-top:12px;justify-content:center"><i data-icon="shield" data-size="sm"></i>Payment held until you confirm delivery</div></aside>
 </div></main><footer class="cv-footer"><span class="cv-wordmark">convie</span><span>Buyer protection · Payments by Paystack, Flutterwave and Stripe · Help</span><span>© 2026 Convie</span></footer>
 <script>window.Convie.hydrateIcons(document);</script>

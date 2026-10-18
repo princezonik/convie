@@ -17,5 +17,28 @@
   ReactDOM.createRoot(document.getElementById('root')).render(h(C.DataTable,{columns:[{key:'id',label:'Order',mono:true},{key:'buyer',label:'Buyer'},{key:'status',label:'Status',render:function(r){return h(C.StatusPill,{status:r.status})}},{key:'total',label:'Total',align:'right',render:function(r){return C.formatMoney(r.t,'NGN')}}],rows:[{id:'CNV-24-08813-A',buyer:'Amara O., London',status:'awaiting-shipment',t:9800000},{id:'CNV-24-08790-B',buyer:'Kofi M., Accra',status:'shipped',t:4250000,_selected:true},{id:'CNV-24-08755-A',buyer:'Wanjiru K., Nairobi',status:'disputed',t:2100000,_flag:true}],footer:'3 of 128 orders'}));
 </script>
 
+<script>(function(){
+  function go(n){ if(n) location.href = n + ".html"; }
+  document.addEventListener("click", function(e){
+    var el = e.target.closest("[data-next]"); if(!el || el.tagName === "FORM") return;
+    if (el.closest("form[data-next]") && el.type === "submit") return;
+    e.preventDefault(); go(el.getAttribute("data-next"));
+  });
+  document.addEventListener("submit", function(e){ var f = e.target.closest("form[data-next]"); if(f){ e.preventDefault(); go(f.getAttribute("data-next")); } });
+  document.querySelectorAll(".cv-otp").forEach(function(g){
+    var ins = g.querySelectorAll("input");
+    ins.forEach(function(inp, i){
+      inp.removeAttribute("maxlength");
+      inp.addEventListener("input", function(){
+        var d = inp.value.replace(/\D/g, "");
+        if (d.length > 1) { for (var j = 0; j < d.length && i + j < ins.length; j++) ins[i + j].value = d[j]; (ins[Math.min(i + d.length, ins.length - 1)]).focus(); return; }
+        inp.value = d; if (d && ins[i+1]) ins[i+1].focus();
+      });
+      inp.addEventListener("keydown", function(e){ if(e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); });
+      inp.addEventListener("paste", function(e){ var d = (e.clipboardData.getData("text") || "").replace(/\D/g, ""); if(!d) return; e.preventDefault(); ins.forEach(function(x, j){ x.value = d[j] || ""; }); (ins[Math.min(d.length, ins.length) - 1] || inp).focus(); });
+    });
+    if (ins[0] && !ins[0].value) ins[0].focus();
+  });
+})();</script>
 </body>
 </html>

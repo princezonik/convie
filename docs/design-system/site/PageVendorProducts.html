@@ -21,5 +21,28 @@
 <div class="cv-card cv-card-flush"><table class="cv-table"><thead><tr><th>Product</th><th>SKU</th><th>Variants</th><th>Stock</th><th class="cv-r">Base price</th><th>Status</th></tr></thead><tbody><tr><td><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-c"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--info);opacity:.28"></div></div><b>Hand-dyed adire throw</b></div></td><td><span class="cv-mono">ADR-THR</span></td><td>3 colours · 3 sizes</td><td>31</td><td class="cv-r cv-num">₦98,000.00</td><td><span class="cv-pill cv-pill-success"><i data-icon="check"></i>Live</span></td></tr><tr><td><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-d"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--line-strong);opacity:.28"></div></div><b>Aso-oke gele, gold</b></div></td><td><span class="cv-mono">ADR-GEL</span></td><td>1</td><td><span style="color:var(--warning);font-weight:600">2</span></td><td class="cv-r cv-num">₦64,250.00</td><td><span class="cv-pill cv-pill-success"><i data-icon="check"></i>Live</span></td></tr><tr><td><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-a"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--brand);opacity:.28"></div></div><b>Indigo kaftan</b></div></td><td><span class="cv-mono">ADR-KAF</span></td><td>4 sizes</td><td>12</td><td class="cv-r cv-num">₦117,900.00</td><td><span class="cv-pill cv-pill-warning"><i data-icon="clock"></i>Awaiting review</span></td></tr><tr><td><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-b"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--accent);opacity:.28"></div></div><b>Adire wall hanging</b></div></td><td><span class="cv-mono">ADR-WAL</span></td><td>1</td><td>4</td><td class="cv-r cv-num">₦146,400.00</td><td><span class="cv-pill cv-pill-warning"><i data-icon="clock"></i>Awaiting review</span></td></tr><tr><td><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-d"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--line-strong);opacity:.28"></div></div><div><b>Adire face mask</b><div class="cv-small" style="color:var(--danger)">Medical claims are not allowed in titles</div></div></div></td><td><span class="cv-mono">ADR-MSK</span></td><td>1</td><td>40</td><td class="cv-r cv-num">₦6,500.00</td><td><span class="cv-pill cv-pill-danger"><i data-icon="x"></i>Rejected</span></td></tr><tr><td><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-a"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--brand);opacity:.28"></div></div><b>Adire apron</b></div></td><td><span class="cv-mono">ADR-APR</span></td><td>2 colours</td><td>0</td><td class="cv-r cv-num">₦21,000.00</td><td><span class="cv-pill cv-pill-neutral"><i data-icon="file"></i>Draft</span></td></tr></tbody></table><div class="cv-table-foot">Showing 6 of 24</div></div></div></div></div>
 <script>window.Convie.hydrateIcons(document);</script>
 
+<script>(function(){
+  function go(n){ if(n) location.href = n + ".html"; }
+  document.addEventListener("click", function(e){
+    var el = e.target.closest("[data-next]"); if(!el || el.tagName === "FORM") return;
+    if (el.closest("form[data-next]") && el.type === "submit") return;
+    e.preventDefault(); go(el.getAttribute("data-next"));
+  });
+  document.addEventListener("submit", function(e){ var f = e.target.closest("form[data-next]"); if(f){ e.preventDefault(); go(f.getAttribute("data-next")); } });
+  document.querySelectorAll(".cv-otp").forEach(function(g){
+    var ins = g.querySelectorAll("input");
+    ins.forEach(function(inp, i){
+      inp.removeAttribute("maxlength");
+      inp.addEventListener("input", function(){
+        var d = inp.value.replace(/\D/g, "");
+        if (d.length > 1) { for (var j = 0; j < d.length && i + j < ins.length; j++) ins[i + j].value = d[j]; (ins[Math.min(i + d.length, ins.length - 1)]).focus(); return; }
+        inp.value = d; if (d && ins[i+1]) ins[i+1].focus();
+      });
+      inp.addEventListener("keydown", function(e){ if(e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); });
+      inp.addEventListener("paste", function(e){ var d = (e.clipboardData.getData("text") || "").replace(/\D/g, ""); if(!d) return; e.preventDefault(); ins.forEach(function(x, j){ x.value = d[j] || ""; }); (ins[Math.min(d.length, ins.length) - 1] || inp).focus(); });
+    });
+    if (ins[0] && !ins[0].value) ins[0].focus();
+  });
+})();</script>
 </body>
 </html>

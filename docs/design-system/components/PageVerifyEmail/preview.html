@@ -1,0 +1,22 @@
+<!-- @dsCard group="Pages · Buyer" height=760 width=1280 page subtitle="Verify email after sign-up" -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>Verify email after sign-up</title></head>
+<body>
+<div class="cv-auth" style="min-height:760px;grid-template-columns:1fr">
+ <div class="cv-auth-form" style="flex-direction:column;gap:24px"><span class="cv-wordmark" style="font-size:28px">convie</span>
+  <form class="cv-card" style="width:480px;padding:40px" data-next="PageSignIn" novalidate><div class="cv-auth-box" style="max-width:none">
+   <span class="cv-empty-icon" style="background:var(--brand-soft);color:var(--brand)"><i data-icon="mail"></i></span>
+   <div><h1 class="cv-h1">Check your email</h1><div class="cv-muted">We sent a 6-digit code to <b style="color:var(--ink)">amara.okafor@example.com</b>. It expires in 10 minutes.</div></div>
+   <div class="cv-otp" role="group" aria-label="Verification code">
+    <input inputmode="numeric" maxlength="1" aria-label="Digit 1"><input inputmode="numeric" maxlength="1" aria-label="Digit 2"><input inputmode="numeric" maxlength="1" aria-label="Digit 3"><input inputmode="numeric" maxlength="1" aria-label="Digit 4"><input inputmode="numeric" maxlength="1" aria-label="Digit 5"><input inputmode="numeric" maxlength="1" aria-label="Digit 6">
+   </div>
+   <button class="cv-btn cv-btn-primary cv-btn-lg cv-btn-block" type="submit">Verify email</button>
+   <div class="cv-row cv-small cv-muted" style="justify-content:space-between"><span>No email? Check spam, or <a class="cv-link">resend in 0:42</a></span><a class="cv-link" data-next="PageSignUp">Change email</a></div>
+   <hr class="cv-divider" style="margin:0">
+   <div class="cv-alert cv-alert-info"><i data-icon="info"></i><div>You can browse and add to your cart now. You need a verified email to check out.</div></div>
+  </div></form>
+ </div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+</body>
+</html>

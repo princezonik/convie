@@ -34,5 +34,28 @@
 <div class="cv-card cv-card-flush"><table class="cv-table"><thead><tr><th>Sub-order</th><th>Buyer</th><th>Items</th><th>Ship by</th><th>Status</th><th class="cv-r">Your net</th></tr></thead><tbody><tr><td><span class="cv-mono">CNV-24-08813-A</span></td><td>Amara O. · London, UK</td><td>3</td><td>Thu 16 Oct</td><td><span class="cv-pill cv-pill-warning"><i data-icon="package"></i>To ship</span></td><td class="cv-r cv-num">₦179,400.00</td></tr><tr><td><span class="cv-mono">CNV-24-08809-A</span></td><td>Chidi E. · Abuja, NG</td><td>1</td><td>Fri 17 Oct</td><td><span class="cv-pill cv-pill-warning"><i data-icon="package"></i>To ship</span></td><td class="cv-r cv-num">₦90,160.00</td></tr><tr><td><span class="cv-mono">CNV-24-08801-C</span></td><td>Mariam S. · Accra, GH</td><td>2</td><td>Sat 18 Oct</td><td><span class="cv-pill cv-pill-warning"><i data-icon="package"></i>To ship</span></td><td class="cv-r cv-num">₦59,110.00</td></tr></tbody></table></div></div></div></div>
 <script>window.Convie.hydrateIcons(document);</script>
 
+<script>(function(){
+  function go(n){ if(n) location.href = n + ".html"; }
+  document.addEventListener("click", function(e){
+    var el = e.target.closest("[data-next]"); if(!el || el.tagName === "FORM") return;
+    if (el.closest("form[data-next]") && el.type === "submit") return;
+    e.preventDefault(); go(el.getAttribute("data-next"));
+  });
+  document.addEventListener("submit", function(e){ var f = e.target.closest("form[data-next]"); if(f){ e.preventDefault(); go(f.getAttribute("data-next")); } });
+  document.querySelectorAll(".cv-otp").forEach(function(g){
+    var ins = g.querySelectorAll("input");
+    ins.forEach(function(inp, i){
+      inp.removeAttribute("maxlength");
+      inp.addEventListener("input", function(){
+        var d = inp.value.replace(/\D/g, "");
+        if (d.length > 1) { for (var j = 0; j < d.length && i + j < ins.length; j++) ins[i + j].value = d[j]; (ins[Math.min(i + d.length, ins.length - 1)]).focus(); return; }
+        inp.value = d; if (d && ins[i+1]) ins[i+1].focus();
+      });
+      inp.addEventListener("keydown", function(e){ if(e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); });
+      inp.addEventListener("paste", function(e){ var d = (e.clipboardData.getData("text") || "").replace(/\D/g, ""); if(!d) return; e.preventDefault(); ins.forEach(function(x, j){ x.value = d[j] || ""; }); (ins[Math.min(d.length, ins.length) - 1] || inp).focus(); });
+    });
+    if (ins[0] && !ins[0].value) ins[0].focus();
+  });
+})();</script>
 </body>
 </html>

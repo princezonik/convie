@@ -22,5 +22,28 @@
 <div class="cv-card cv-card-flush"><table class="cv-table"><thead><tr><th>Run</th><th>Date</th><th>Transfers</th><th class="cv-r">Paid</th><th>Failed</th><th>Status</th></tr></thead><tbody><tr><td><span class="cv-mono">RUN-2610-17</span></td><td>Fri 17 Oct</td><td>279</td><td class="cv-r cv-num">$148,220 equiv.</td><td><span style="color:var(--danger);font-weight:600">2</span> · retried</td><td><span class="cv-pill cv-pill-success"><i data-icon="check"></i>Settled</span></td></tr><tr><td><span class="cv-mono">RUN-2610-10</span></td><td>Fri 10 Oct</td><td>268</td><td class="cv-r cv-num">$139,840 equiv.</td><td>1 · retried</td><td><span class="cv-pill cv-pill-success"><i data-icon="check"></i>Settled</span></td></tr><tr><td><span class="cv-mono">RUN-2610-03</span></td><td>Fri 3 Oct</td><td>255</td><td class="cv-r cv-num">$131,005 equiv.</td><td>0</td><td><span class="cv-pill cv-pill-success"><i data-icon="check"></i>Settled</span></td></tr></tbody></table></div></div></div></div>
 <script>window.Convie.hydrateIcons(document);</script>
 
+<script>(function(){
+  function go(n){ if(n) location.href = n + ".html"; }
+  document.addEventListener("click", function(e){
+    var el = e.target.closest("[data-next]"); if(!el || el.tagName === "FORM") return;
+    if (el.closest("form[data-next]") && el.type === "submit") return;
+    e.preventDefault(); go(el.getAttribute("data-next"));
+  });
+  document.addEventListener("submit", function(e){ var f = e.target.closest("form[data-next]"); if(f){ e.preventDefault(); go(f.getAttribute("data-next")); } });
+  document.querySelectorAll(".cv-otp").forEach(function(g){
+    var ins = g.querySelectorAll("input");
+    ins.forEach(function(inp, i){
+      inp.removeAttribute("maxlength");
+      inp.addEventListener("input", function(){
+        var d = inp.value.replace(/\D/g, "");
+        if (d.length > 1) { for (var j = 0; j < d.length && i + j < ins.length; j++) ins[i + j].value = d[j]; (ins[Math.min(i + d.length, ins.length - 1)]).focus(); return; }
+        inp.value = d; if (d && ins[i+1]) ins[i+1].focus();
+      });
+      inp.addEventListener("keydown", function(e){ if(e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); });
+      inp.addEventListener("paste", function(e){ var d = (e.clipboardData.getData("text") || "").replace(/\D/g, ""); if(!d) return; e.preventDefault(); ins.forEach(function(x, j){ x.value = d[j] || ""; }); (ins[Math.min(d.length, ins.length) - 1] || inp).focus(); });
+    });
+    if (ins[0] && !ins[0].value) ins[0].focus();
+  });
+})();</script>
 </body>
 </html>

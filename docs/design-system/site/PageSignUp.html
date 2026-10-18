@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Create a buyer account · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-auth" style="min-height:860px">
+ <div class="cv-auth-panel"><span class="cv-wordmark" style="font-size:32px">convie</span>
+  <div style="position:absolute;right:-80px;top:120px;width:320px;height:320px;border-radius:50%;background:var(--accent)"></div>
+  <div style="position:absolute;right:160px;top:340px;width:140px;height:140px;border-radius:var(--radius-lg);background:var(--brand-soft)"></div>
+  <div style="position:relative" class="cv-stack">
+   <div style="font-family:var(--font-display);font-size:40px;line-height:44px;font-weight:700;max-width:400px">Shop 300 vendors. Pay once, in your currency.</div>
+   <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;max-width:400px">
+    <li class="cv-row" style="flex-wrap:nowrap"><i data-icon="shield"></i>Your payment is held until you confirm delivery</li>
+    <li class="cv-row" style="flex-wrap:nowrap"><i data-icon="globe"></i>Prices in NGN, GHS, KES, GBP, EUR or USD</li>
+    <li class="cv-row" style="flex-wrap:nowrap"><i data-icon="truck"></i>Tracking from every vendor in one place</li>
+   </ul>
+  </div></div>
+ <div class="cv-auth-form"><form class="cv-auth-box" data-next="PageVerifyEmail" novalidate>
+  <div><h1 class="cv-h1">Create your account</h1><div class="cv-muted">Already have one? <a class="cv-link" data-next="PageSignIn">Sign in</a></div></div>
+  <div class="cv-field"><label class="cv-label" for="su-name">Full name</label><input id="su-name" class="cv-input cv-input-lg" autocomplete="name" value="Amara Okafor"></div>
+  <div class="cv-field"><label class="cv-label" for="su-email">Email</label><input id="su-email" class="cv-input cv-input-lg" type="email" autocomplete="email" value="amara.okafor@example.com"><span class="cv-hint">We send a 6-digit code to verify it.</span></div>
+  <div class="cv-form-grid" style="grid-template-columns:150px 1fr">
+   <div class="cv-field"><label class="cv-label" for="su-country">Country</label><select id="su-country" class="cv-select cv-input-lg"><option>United Kingdom</option><option>Nigeria</option><option>Ghana</option><option>Kenya</option><option>Eurozone</option><option>United States</option></select></div>
+   <div class="cv-field"><label class="cv-label" for="su-phone">Phone <span class="cv-muted" style="font-weight:400">(optional)</span></label><div class="cv-input-group"><span class="cv-addon">+44</span><input id="su-phone" class="cv-input cv-input-lg" autocomplete="tel-national" placeholder="7700 900 412"></div></div>
+  </div>
+  <div class="cv-small cv-muted" style="margin-top:-8px">Prices show in <b style="color:var(--ink)">GBP</b>. You can change this any time.</div>
+  <div class="cv-field"><label class="cv-label" for="su-pass">Password</label><input id="su-pass" class="cv-input cv-input-lg" type="password" autocomplete="new-password" value="convie-demo-pass"><span class="cv-hint">At least 10 characters.</span></div>
+  <label class="cv-check"><input type="checkbox" checked>I agree to Convie's buyer terms and privacy notice.</label>
+  <button class="cv-btn cv-btn-primary cv-btn-lg cv-btn-block" type="submit">Create account</button>
+  <div class="cv-row cv-small cv-muted" style="justify-content:center">Want to sell? <a class="cv-link" data-next="PageVendorApply">Apply as a vendor</a></div>
+ </form></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+<script>(function(){
+  function go(n){ if(n) location.href = n + ".html"; }
+  document.addEventListener("click", function(e){
+    var el = e.target.closest("[data-next]"); if(!el || el.tagName === "FORM") return;
+    if (el.closest("form[data-next]") && el.type === "submit") return;
+    e.preventDefault(); go(el.getAttribute("data-next"));
+  });
+  document.addEventListener("submit", function(e){ var f = e.target.closest("form[data-next]"); if(f){ e.preventDefault(); go(f.getAttribute("data-next")); } });
+  document.querySelectorAll(".cv-otp").forEach(function(g){
+    var ins = g.querySelectorAll("input");
+    ins.forEach(function(inp, i){
+      inp.removeAttribute("maxlength");
+      inp.addEventListener("input", function(){
+        var d = inp.value.replace(/\D/g, "");
+        if (d.length > 1) { for (var j = 0; j < d.length && i + j < ins.length; j++) ins[i + j].value = d[j]; (ins[Math.min(i + d.length, ins.length - 1)]).focus(); return; }
+        inp.value = d; if (d && ins[i+1]) ins[i+1].focus();
+      });
+      inp.addEventListener("keydown", function(e){ if(e.key === "Backspace" && !inp.value && ins[i-1]) ins[i-1].focus(); });
+      inp.addEventListener("paste", function(e){ var d = (e.clipboardData.getData("text") || "").replace(/\D/g, ""); if(!d) return; e.preventDefault(); ins.forEach(function(x, j){ x.value = d[j] || ""; }); (ins[Math.min(d.length, ins.length) - 1] || inp).focus(); });
+    });
+    if (ins[0] && !ins[0].value) ins[0].focus();
+  });
+})();</script>
+</body>
+</html>
