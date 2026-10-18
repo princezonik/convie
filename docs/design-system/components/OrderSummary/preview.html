@@ -1,0 +1,12 @@
+<!-- @dsCard group="Commerce" height=260 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>OrderSummary — preview</title></head>
+<body>
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'cv-card',style:{maxWidth:380}},h(C.OrderSummary,{currency:'GBP',lines:[{label:'Subtotal, 4 items',minor:13870},{label:'Shipping · Adire Atelier',minor:1250,muted:true},{label:'Shipping · Bonwire Loom Co.',minor:990,muted:true},{label:'UK VAT (20%)',minor:3222,muted:true}],totalMinor:19332,note:'Includes a 1.5% currency conversion spread.'})));
+</script>
+</body>
+</html>

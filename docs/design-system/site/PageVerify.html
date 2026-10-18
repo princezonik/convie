@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Email, phone and 2FA verification · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-auth" style="min-height:760px;grid-template-columns:1fr">
+ <div class="cv-auth-form" style="flex-direction:column;gap:24px"><span class="cv-wordmark" style="font-size:28px">convie</span>
+ <div class="cv-card" style="width:460px;padding:40px" ><div class="cv-auth-box" style="max-width:none">
+  <span class="cv-empty-icon" style="background:var(--brand-soft);color:var(--brand)"><i data-icon="shield"></i></span>
+  <div><h1 class="cv-h1">Enter your sign-in code</h1><div class="cv-muted">Open your authenticator app and enter the 6-digit code for Convie. Vendor and admin accounts always need this step.</div></div>
+  <div class="cv-otp"><input value="4" aria-label="Digit 1"><input value="8" aria-label="Digit 2"><input value="2" aria-label="Digit 3"><input value="1" aria-label="Digit 4"><input value="" aria-label="Digit 5"><input value="" aria-label="Digit 6"></div>
+  <button class="cv-btn cv-btn-primary cv-btn-lg cv-btn-block">Verify</button>
+  <div class="cv-small cv-muted">Lost your device? <a class="cv-link">Use a recovery code</a></div>
+  <hr class="cv-divider" style="margin:0">
+  <div class="cv-row" style="flex-wrap:nowrap;gap:12px"><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>Email verified</span><span class="cv-pill cv-pill-warning"><i data-icon="clock"></i>Phone not verified</span><a class="cv-link cv-small">Verify +234 803 …</a></div>
+ </div></div></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

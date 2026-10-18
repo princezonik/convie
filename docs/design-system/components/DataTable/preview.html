@@ -1,0 +1,12 @@
+<!-- @dsCard group="Data" height=240 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>DataTable — preview</title></head>
+<body>
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(C.DataTable,{columns:[{key:'id',label:'Order',mono:true},{key:'buyer',label:'Buyer'},{key:'status',label:'Status',render:function(r){return h(C.StatusPill,{status:r.status})}},{key:'total',label:'Total',align:'right',render:function(r){return C.formatMoney(r.t,'NGN')}}],rows:[{id:'CNV-24-08813-A',buyer:'Amara O., London',status:'awaiting-shipment',t:9800000},{id:'CNV-24-08790-B',buyer:'Kofi M., Accra',status:'shipped',t:4250000,_selected:true},{id:'CNV-24-08755-A',buyer:'Wanjiru K., Nairobi',status:'disputed',t:2100000,_flag:true}],footer:'3 of 128 orders'}));
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProductCard · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"></head>
+<body>
+
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'cv-grid-4'},h(C.ProductCard,{name:'Hand-dyed adire throw',vendor:'Adire Atelier',origin:'Lagos',minor:4820,currency:'GBP',baseMinor:9800000,baseCurrency:'NGN',rating:'4.8',reviews:126,art:'c'}),h(C.ProductCard,{name:'Kente stole, single weave',vendor:'Bonwire Loom Co.',origin:'Kumasi',minor:3650,currency:'GBP',baseMinor:72500,baseCurrency:'GHS',rating:'4.9',reviews:58,art:'b',badge:'new-vendor'}),h(C.ProductCard,{name:'Kiondo sisal basket',vendor:'Nairobi Weavers',origin:'Nairobi',minor:2240,currency:'GBP',baseMinor:380000,baseCurrency:'KES',rating:'4.7',reviews:203,art:'a'}),h(C.ProductCard,{name:'Shea body butter, 500 g',vendor:'Tamale Naturals',origin:'Tamale',minor:1490,currency:'GBP',baseMinor:29500,baseCurrency:'GHS',rating:'4.6',reviews:411,art:'d'})));
+</script>
+
+</body>
+</html>

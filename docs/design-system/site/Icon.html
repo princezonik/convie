@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Icon · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"></head>
+<body>
+
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{style:{display:'grid',gridTemplateColumns:'repeat(12,1fr)',gap:16,color:'var(--ink)'}},C.iconNames.map(function(n){return h('div',{key:n,title:n,style:{display:'flex',flexDirection:'column',alignItems:'center',gap:4,fontSize:11,color:'var(--ink-muted)'}},h(C.Icon,{name:n}),n)})));
+</script>
+
+</body>
+</html>

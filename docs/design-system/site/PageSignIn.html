@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Sign in and register · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-auth" style="min-height:760px">
+ <div class="cv-auth-panel"><span class="cv-wordmark" style="font-size:32px">convie</span>
+  <div style="position:absolute;right:-80px;top:120px;width:320px;height:320px;border-radius:50%;background:var(--accent)"></div>
+  <div style="position:absolute;right:160px;top:340px;width:140px;height:140px;border-radius:var(--radius-lg);background:var(--brand-soft)"></div>
+  <div style="position:relative"><div style="font-family:var(--font-display);font-size:40px;line-height:44px;font-weight:700;max-width:380px">One basket. Many vendors. Your currency.</div><p style="opacity:.9;max-width:380px">Shop independent vendors from Nigeria, Ghana and Kenya, or sell to buyers in six markets.</p></div></div>
+ <div class="cv-auth-form"><div class="cv-auth-box">
+  <div><h1 class="cv-h1">Sign in</h1><div class="cv-muted">New to Convie? <a class="cv-link">Create an account</a></div></div>
+  <div class="cv-field"><label class="cv-label">Email or phone</label><input class="cv-input cv-input-lg" value="amara.okafor@example.com"></div>
+  <div class="cv-field"><div class="cv-row" style="justify-content:space-between"><label class="cv-label">Password</label><a class="cv-link cv-small">Forgot password?</a></div><input class="cv-input cv-input-lg" type="password" value="password12"></div>
+  <label class="cv-check"><input type="checkbox" checked>Keep me signed in on this device</label>
+  <button class="cv-btn cv-btn-primary cv-btn-lg cv-btn-block">Sign in</button>
+  <div class="cv-row cv-small cv-muted" style="justify-content:center">Selling on Convie? <a class="cv-link">Apply as a vendor</a></div>
+ </div></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

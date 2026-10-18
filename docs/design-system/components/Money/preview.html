@@ -1,0 +1,12 @@
+<!-- @dsCard group="Money" height=80 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Money — preview</title></head>
+<body>
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'cv-row',style:{gap:24,fontSize:20}},[[128450000,'NGN'],[45820,'GHS'],[1234500,'KES'],[4820,'GBP'],[5590,'EUR'],[6125,'USD']].map(function(m){return h(C.Money,{key:m[1],minor:m[0],currency:m[1]})})));
+</script>
+</body>
+</html>

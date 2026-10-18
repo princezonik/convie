@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EmptyState · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"></head>
+<body>
+
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'cv-card'},h(C.EmptyState,{icon:'package',title:'No orders to ship',action:h(C.Button,{variant:'secondary',icon:'plus'},'Add a product')},'New orders appear here once the buyer\'s payment is confirmed.')));
+</script>
+
+</body>
+</html>

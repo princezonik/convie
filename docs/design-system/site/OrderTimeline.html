@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OrderTimeline · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"></head>
+<body>
+
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{style:{maxWidth:420}},h(C.OrderTimeline,{events:[{title:'Order placed',meta:'Mon 13 Oct, 09:12',state:'done'},{title:'Payment confirmed',meta:'Paystack · verified 09:13',state:'done'},{title:'Shipped with GIG Logistics',meta:'Tracking GIG-4471029',state:'current',icon:'truck'},{title:'Delivered',meta:'Expected Thu 16 Oct',state:'todo'},{title:'Receipt confirmed',meta:'Auto-confirms 5 days after delivery',state:'todo'}]})));
+</script>
+
+</body>
+</html>

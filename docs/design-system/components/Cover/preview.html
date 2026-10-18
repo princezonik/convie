@@ -1,0 +1,42 @@
+<!-- @dsCard height=300 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Convie — cover</title>
+<style>
+  html, body { margin: 0; background: var(--surface); }
+  .cover { position: relative; width: 960px; height: 300px; overflow: hidden; background: var(--surface); }
+  .cover svg { position: absolute; inset: 0; }
+  .brand { fill: var(--brand); }
+  .accent { fill: var(--accent); }
+  .ink { fill: var(--ink); }
+  .coin { fill: var(--surface); }
+  .text { position: absolute; left: 40px; bottom: 40px; max-width: 440px; }
+  .name { font-family: var(--font-display); font-weight: 700; font-size: 120px; line-height: 0.92; letter-spacing: -0.035em; color: var(--ink); margin: 0; }
+  .tag { font-family: var(--font-sans); font-size: 14px; line-height: 20px; color: var(--ink-muted); margin: 16px 0 0; }
+</style></head>
+<body>
+<div class="cover">
+  <svg viewBox="0 0 960 300" width="960" height="300" aria-hidden="true">
+    <!--
+      blocks: brand slab 232x264 (radius-lg 16), accent disc r96 (radius-pill), ink pill 120x48 (radius-pill = 24); ground surface.
+      arrangement: one tall slab bleeding off the top with two satellites, the accent disc bleeding off the bottom-right.
+      pattern: "soft, friendly, large radii" + the literal motif of money: coins (r12 discs) cut from the slab in surface, 3 x 4 at space-12 (48px) pitch.
+      scales: space-12 pitch, space-10 (40px) insets, radius-lg on the slab, radius-pill on disc, pill and coins.
+    -->
+    <rect class="brand" x="600" y="-16" width="232" height="264" rx="16" ry="16"/>
+    <g class="coin">
+      <circle cx="648" cy="40" r="12"/><circle cx="696" cy="40" r="12"/><circle cx="744" cy="40" r="12"/>
+      <circle cx="648" cy="88" r="12"/><circle cx="696" cy="88" r="12"/><circle cx="744" cy="88" r="12"/>
+      <circle cx="648" cy="136" r="12"/><circle cx="696" cy="136" r="12"/><circle cx="744" cy="136" r="12"/>
+      <circle cx="648" cy="184" r="12"/><circle cx="696" cy="184" r="12"/><circle cx="744" cy="184" r="12"/>
+    </g>
+    <circle class="accent" cx="868" cy="236" r="96"/>
+    <rect class="ink" x="496" y="212" width="96" height="48" rx="24" ry="24"/>
+  </svg>
+  <div class="text">
+    <h1 class="name">Convie</h1>
+    <p class="tag">One basket, many vendors, every currency. Make money legible.</p>
+  </div>
+</div>
+</body>
+</html>

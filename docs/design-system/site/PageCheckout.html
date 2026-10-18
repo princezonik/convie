@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Checkout with FX lock, tax and routed methods · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<header class="cv-topnav"><a class="cv-wordmark" href="#">convie</a>
+<div class="cv-search" role="search"><i data-icon="search" data-size="sm"></i><span>Search products, vendors and categories</span></div>
+<div class="cv-topnav-actions"><span class="cv-locale"><i data-icon="globe" data-size="sm"></i>UK · GBP</span>
+<button class="cv-btn cv-btn-ghost"><i data-icon="store"></i>Sell on Convie</button>
+<button class="cv-btn cv-btn-ghost"><i data-icon="user"></i>Amara</button>
+<button class="cv-btn cv-btn-ghost cv-cart-btn" aria-label="Cart"><i data-icon="cart"></i><span class="cv-cart-count">4</span></button></div></header><main class="cv-page">
+<div class="cv-pagehead" style="margin-bottom:24px"><h1 class="cv-h1">Checkout</h1><ol class="cv-stepper"><li class="cv-step cv-step-done"><span class="cv-step-dot"><i data-icon="check" data-size="sm"></i></span>Cart</li><li class="cv-step-sep"></li><li class="cv-step cv-step-done"><span class="cv-step-dot"><i data-icon="check" data-size="sm"></i></span>Delivery</li><li class="cv-step-sep"></li><li class="cv-step cv-step-current"><span class="cv-step-dot">3</span>Payment</li></ol></div>
+<div class="cv-split">
+ <div class="cv-stack" style="gap:24px">
+  <div class="cv-fxlock"><i data-icon="lock"></i><span>Price locked at <b>1 GBP = 2,033.20 NGN</b> and <b>1 GBP = 19.86 GHS</b>. Pay before it expires.</span><span class="cv-fxlock-time">12:22</span></div>
+  <div class="cv-card"><div class="cv-card-head" style="margin-bottom:12px"><h2 class="cv-h2">Delivery</h2><a class="cv-link cv-small">Change</a></div>
+   <div>Amara Okafor · 14 Elm Row, London N1 7QB, United Kingdom · +44 7700 900 412</div></div>
+  <div class="cv-card"><h2 class="cv-h2" style="margin-bottom:16px">Payment method</h2>
+   <div class="cv-stack" style="gap:8px">
+   <div class="cv-option cv-option-on"><span class="cv-radio"></span><i data-icon="card"></i><div class="cv-option-body"><div class="cv-option-title">Card</div><div class="cv-option-meta">Visa, Mastercard, Amex. You enter your card on the secure payment page.</div></div><span class="cv-small cv-muted">Flutterwave</span></div>
+   <div class="cv-option"><span class="cv-radio"></span><i data-icon="phone"></i><div class="cv-option-body"><div class="cv-option-title">Apple Pay</div></div></div><div class="cv-option"><span class="cv-radio"></span><i data-icon="phone"></i><div class="cv-option-body"><div class="cv-option-title">Google Pay</div></div></div></div>
+   <div class="cv-small cv-muted" style="margin-top:12px;display:flex;gap:6px;align-items:center"><i data-icon="lock" data-size="sm"></i>Card details go straight to our payment provider. Convie never sees them.</div></div>
+  <div class="cv-card"><h2 class="cv-h2" style="margin-bottom:16px">Billing</h2><label class="cv-check"><input type="checkbox" checked>Same as delivery address</label></div>
+ </div>
+ <aside class="cv-card cv-sticky"><h2 class="cv-h2" style="margin-bottom:16px">2 vendors, 4 items</h2>
+  <div class="cv-stack" style="gap:12px;margin-bottom:16px"><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-c"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--info);opacity:.28"></div></div><div style="flex:1"><div class="cv-small" style="font-weight:600">Hand-dyed adire throw</div><div class="cv-small cv-muted">Adire Atelier · 1</div></div><span class="cv-num cv-small" style="font-weight:600">£48.20</span></div><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-a"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--brand);opacity:.28"></div></div><div style="flex:1"><div class="cv-small" style="font-weight:600">Adire cushion cover</div><div class="cv-small cv-muted">Adire Atelier · 2</div></div><span class="cv-num cv-small" style="font-weight:600">£47.20</span></div><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb cv-thumb-sm"><div class="cv-art cv-art-b"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--accent);opacity:.28"></div></div><div style="flex:1"><div class="cv-small" style="font-weight:600">Kente stole</div><div class="cv-small cv-muted">Bonwire Loom Co. · 1</div></div><span class="cv-num cv-small" style="font-weight:600">£36.50</span></div></div>
+  <div class="cv-summary"><div class="cv-summary-row"><span>Subtotal</span><span>£131.90</span></div><div class="cv-summary-row"><span class="cv-muted">Shipping · Adire Atelier</span><span>£12.50</span></div><div class="cv-summary-row"><span class="cv-muted">Shipping · Bonwire Loom Co.</span><span>£9.90</span></div><div class="cv-summary-row"><span class="cv-muted">UK VAT (20%)</span><span>£30.86</span></div><div class="cv-summary-row cv-summary-total"><span>Total</span><span>£185.16</span></div><div class="cv-small cv-muted">Charged in GBP. Each vendor is paid in their own currency.</div></div>
+  <button class="cv-btn cv-btn-primary cv-btn-lg cv-btn-block" style="margin-top:20px"><i data-icon="lock"></i>Pay £185.16</button>
+  <div class="cv-small cv-muted" style="margin-top:12px;text-align:center">By paying you agree to Convie's buyer terms.</div></aside>
+</div></main>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

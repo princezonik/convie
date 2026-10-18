@@ -1,0 +1,12 @@
+<!-- @dsCard group="Forms" height=220 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Field — preview</title></head>
+<body>
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'cv-form-grid',style:{maxWidth:720}},h(C.Field,{label:'Business name',defaultValue:'Adire Atelier Ltd'}),h(C.Field,{label:'Phone',prefix:'+234',placeholder:'803 000 0000',hint:'We send a code to verify it.'}),h(C.Field,{label:'BVN',defaultValue:'2231904',error:'BVN must be 11 digits.'}),h(C.Field,{label:'Base price',prefix:'NGN',defaultValue:'98,000.00',hint:'Buyers see this converted at checkout.'})));
+</script>
+</body>
+</html>

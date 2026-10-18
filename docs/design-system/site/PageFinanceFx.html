@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>FX exposure between rate lock and payout · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-console"><nav class="cv-sidenav" aria-label="Finance navigation"><div class="cv-wordmark">convie<span class="cv-sidenav-role">Finance</span></div><a href="#" class="cv-navitem"><i data-icon="book"></i>Ledger</a><a href="#" class="cv-navitem"><i data-icon="refresh"></i>Reconciliation<span class="cv-count">2</span></a><a href="#" class="cv-navitem cv-navitem-on"><i data-icon="swap"></i>FX exposure</a><a href="#" class="cv-navitem"><i data-icon="wallet"></i>Payout runs</a><div class="cv-navsection">Reports</div><a href="#" class="cv-navitem"><i data-icon="file"></i>Tax</a><a href="#" class="cv-navitem"><i data-icon="download"></i>Statements</a>
+<div class="cv-nav-foot"><span class="cv-avatar">NO</span><div><div style="color:var(--ink);font-weight:600">Ngozi Okafor</div>Finance</div></div></nav>
+<div class="cv-main"><div class="cv-topbar"><div class="cv-search" style="max-width:420px"><i data-icon="search" data-size="sm"></i><span>Search orders, products, references</span></div><div style="margin-left:auto" class="cv-row"><span class="cv-locale"><i data-icon="clock" data-size="sm"></i>WAT · Sat 18 Oct</span></div></div>
+<div class="cv-content">
+<div class="cv-pagehead"><div><div class="cv-overline">Rate locked at checkout, paid out weekly</div><h1 class="cv-h1">FX exposure</h1></div><div class="cv-row"><select class="cv-select" style="width:160px"><option>Last 30 days</option></select></div></div>
+<div class="cv-grid-4"><div class="cv-stat"><div class="cv-stat-label">Open exposure</div><div class="cv-stat-value">$48,210</div><div class="cv-stat-meta">Locked, not yet paid out</div></div><div class="cv-stat"><div class="cv-stat-label">Spread earned</div><div class="cv-stat-value">$3,102</div><div class="cv-stat-meta"><span class="cv-delta-up">+1.5%</span> on $206.8k converted</div></div><div class="cv-stat"><div class="cv-stat-label">Realised FX</div><div class="cv-stat-value">−$612</div><div class="cv-stat-meta"><span class="cv-delta-down">−0.3%</span> lock vs payout rate</div></div><div class="cv-stat"><div class="cv-stat-label">Cross-currency cap</div><div class="cv-stat-value">62% used</div><div class="cv-stat-meta">$31k of $50k today</div></div></div>
+<div class="cv-grid-2" style="align-items:start">
+ <div class="cv-card"><div class="cv-card-head"><h2 class="cv-h2">Open exposure by pair</h2></div>
+  <div style="margin-bottom:14px"><div class="cv-row" style="justify-content:space-between;margin-bottom:6px"><span class="cv-small"><b>GBP → NGN</b></span><span class="cv-small cv-num">$26,030</span></div><div class="cv-meter"><i style="width:54%"></i></div></div><div style="margin-bottom:14px"><div class="cv-row" style="justify-content:space-between;margin-bottom:6px"><span class="cv-small"><b>GBP → GHS</b></span><span class="cv-small cv-num">$8,680</span></div><div class="cv-meter"><i style="width:18%"></i></div></div><div style="margin-bottom:14px"><div class="cv-row" style="justify-content:space-between;margin-bottom:6px"><span class="cv-small"><b>USD → NGN</b></span><span class="cv-small cv-num">$5,790</span></div><div class="cv-meter"><i style="width:12%"></i></div></div><div style="margin-bottom:14px"><div class="cv-row" style="justify-content:space-between;margin-bottom:6px"><span class="cv-small"><b>EUR → KES</b></span><span class="cv-small cv-num">$4,820</span></div><div class="cv-meter cv-meter-warn"><i style="width:10%"></i></div></div><div style="margin-bottom:14px"><div class="cv-row" style="justify-content:space-between;margin-bottom:6px"><span class="cv-small"><b>GBP → KES</b></span><span class="cv-small cv-num">$2,890</span></div><div class="cv-meter"><i style="width:6%"></i></div></div></div>
+ <div class="cv-card"><div class="cv-card-head"><h2 class="cv-h2">Daily realised FX, USD</h2></div>
+  <div class="cv-bars"><div class="cv-bar" style="height:40%"></div><div class="cv-bar" style="height:55%"></div><div class="cv-bar cv-bar-muted" style="height:30%"></div><div class="cv-bar" style="height:62%"></div><div class="cv-bar" style="height:48%"></div><div class="cv-bar" style="height:70%"></div><div class="cv-bar cv-bar-muted" style="height:35%"></div><div class="cv-bar" style="height:44%"></div><div class="cv-bar" style="height:58%"></div><div class="cv-bar" style="height:66%"></div><div class="cv-bar cv-bar-muted" style="height:38%"></div><div class="cv-bar" style="height:52%"></div><div class="cv-bar" style="height:47%"></div><div class="cv-bar" style="height:60%"></div></div><div class="cv-bar-axis"><span>1</span><span></span><span></span><span></span><span></span><span></span><span>7</span><span></span><span></span><span></span><span></span><span></span><span></span><span>14</span></div>
+  <div class="cv-small cv-muted" style="margin-top:12px">Grey bars are days with a loss after spread. Loss days above 0.5% of converted volume alert finance.</div></div>
+</div></div></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

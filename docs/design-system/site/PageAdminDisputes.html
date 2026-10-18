@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Dispute decision · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-console"><nav class="cv-sidenav" aria-label="Admin navigation"><div class="cv-wordmark">convie<span class="cv-sidenav-role">Admin</span></div><a href="#" class="cv-navitem"><i data-icon="shield"></i>Vendor approvals<span class="cv-count">12</span></a><a href="#" class="cv-navitem"><i data-icon="tag"></i>Listing moderation<span class="cv-count">38</span></a><a href="#" class="cv-navitem"><i data-icon="search"></i>Order lookup</a><a href="#" class="cv-navitem cv-navitem-on"><i data-icon="scale"></i>Disputes<span class="cv-count">5</span></a><a href="#" class="cv-navitem"><i data-icon="pause"></i>Payout holds<span class="cv-count">3</span></a><div class="cv-navsection">Directory</div><a href="#" class="cv-navitem"><i data-icon="store"></i>Vendors</a><a href="#" class="cv-navitem"><i data-icon="user"></i>Buyers</a>
+<div class="cv-nav-foot"><span class="cv-avatar">TB</span><div><div style="color:var(--ink);font-weight:600">Tunde Bakare</div>Operations</div></div></nav>
+<div class="cv-main"><div class="cv-topbar"><div class="cv-search" style="max-width:420px"><i data-icon="search" data-size="sm"></i><span>Search orders, products, references</span></div><div style="margin-left:auto" class="cv-row"><span class="cv-locale"><i data-icon="clock" data-size="sm"></i>WAT · Sat 18 Oct</span></div></div>
+<div class="cv-content">
+<div class="cv-pagehead"><div><div class="cv-overline">Disputes · escalated by vendor</div><h1 class="cv-h1">Dispute <span class="cv-mono">DSP-2610-0044</span></h1></div><div class="cv-row"><span class="cv-pill cv-pill-info"><i data-icon="scale"></i>Decide by Fri 24 Oct</span></div></div>
+<div class="cv-grid-2" style="align-items:start">
+ <div class="cv-card cv-stack" style="gap:12px"><div class="cv-row" style="justify-content:space-between"><h2 class="cv-h3">Buyer · Wanjiru K., Nairobi</h2><span class="cv-pill cv-pill-danger"><i data-icon="scale"></i>Did not arrive</span></div>
+  <p style="margin:0">Tracking stopped at Nairobi depot on 2 Oct. Nothing arrived.</p><div class="cv-small cv-muted">Asked for full refund · Ksh 2,100.00</div></div>
+ <div class="cv-card cv-stack" style="gap:12px"><div class="cv-row" style="justify-content:space-between"><h2 class="cv-h3">Vendor · Nairobi Weavers</h2><span class="cv-pill cv-pill-info"><i data-icon="truck"></i>Shipped with Sendy</span></div>
+  <p style="margin:0">Courier shows delivered on 3 Oct, signed by "W.K." Proof of delivery attached.</p><div class="cv-row"><span class="cv-chip"><i data-icon="file" data-size="sm"></i>POD-Sendy-3Oct.pdf</span></div></div>
+</div>
+<div class="cv-card cv-stack" style="gap:20px"><h2 class="cv-h2">Decision</h2>
+ <div class="cv-grid-3" style="gap:12px"><div class="cv-option"><span class="cv-radio"></span><i data-icon="refresh"></i><div class="cv-option-body"><div class="cv-option-title">Refund buyer in full</div><div class="cv-option-meta">Ksh 2,100.00 from vendor pending</div></div></div><div class="cv-option cv-option-on"><span class="cv-radio"></span><i data-icon="wallet"></i><div class="cv-option-body"><div class="cv-option-title">Split</div><div class="cv-option-meta">Refund 50%, release 50%</div></div></div><div class="cv-option"><span class="cv-radio"></span><i data-icon="check"></i><div class="cv-option-body"><div class="cv-option-title">Release to vendor</div><div class="cv-option-meta">Close in vendor's favour</div></div></div></div>
+ <div class="cv-form-grid"><div class="cv-field"><label class="cv-label">Refund to buyer</label><div class="cv-input-group"><span class="cv-addon">KES</span><input class="cv-input" value="1,050.00"></div></div><div class="cv-field"><label class="cv-label">Release to vendor</label><div class="cv-input-group"><span class="cv-addon">KES</span><input class="cv-input" value="1,050.00"></div><span class="cv-hint">Before 8% commission</span></div></div>
+ <div class="cv-field"><label class="cv-label">Reason shared with both parties</label><textarea class="cv-input cv-textarea" style="min-height:72px">The signature on the proof of delivery does not match the buyer's ID. We are splitting the loss.</textarea></div>
+ <div class="cv-row"><button class="cv-btn cv-btn-primary">Confirm decision</button><span class="cv-small cv-muted">Both parties get email and SMS. The ledger posts refund and release entries.</span></div>
+</div></div></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

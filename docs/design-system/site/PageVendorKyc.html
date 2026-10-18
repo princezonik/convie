@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>KYC and KYB verification · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-console"><nav class="cv-sidenav" aria-label="Vendor navigation"><div class="cv-wordmark">convie<span class="cv-sidenav-role">Vendor</span></div><a href="#" class="cv-navitem"><i data-icon="grid"></i>Dashboard</a><a href="#" class="cv-navitem"><i data-icon="package"></i>Orders<span class="cv-count">7</span></a><a href="#" class="cv-navitem"><i data-icon="tag"></i>Products</a><a href="#" class="cv-navitem"><i data-icon="wallet"></i>Payouts</a><a href="#" class="cv-navitem"><i data-icon="scale"></i>Disputes<span class="cv-count">1</span></a><div class="cv-navsection">Account</div><a href="#" class="cv-navitem cv-navitem-on"><i data-icon="shield"></i>Verification</a><a href="#" class="cv-navitem"><i data-icon="store"></i>Store settings</a>
+<div class="cv-nav-foot"><span class="cv-avatar">AA</span><div><div style="color:var(--ink);font-weight:600">Adire Atelier</div>Lagos · NGN</div></div></nav>
+<div class="cv-main"><div class="cv-topbar"><div class="cv-search" style="max-width:420px"><i data-icon="search" data-size="sm"></i><span>Search orders, products, references</span></div><div style="margin-left:auto" class="cv-row"><span class="cv-locale"><i data-icon="clock" data-size="sm"></i>WAT · Sat 18 Oct</span></div></div>
+<div class="cv-content">
+<div class="cv-pagehead"><div><div class="cv-overline">Account</div><h1 class="cv-h1">Verification</h1></div><div class="cv-row"><span class="cv-pill cv-pill-warning"><i data-icon="clock"></i>In review</span></div></div>
+<div class="cv-alert cv-alert-warning"><i data-icon="alert"></i><div><div class="cv-alert-title">We are reviewing your documents.</div>Most reviews finish within 24 hours. You can add products now; they go live once you are approved.</div></div>
+<div class="cv-grid-2" style="align-items:start">
+ <div class="cv-card cv-stack" style="gap:20px"><h2 class="cv-h2">Owner identity (KYC)</h2>
+  <div class="cv-form-grid"><div class="cv-field"><label class="cv-label">Full legal name</label><input class="cv-input" value="Folake Adeyemi"></div><div class="cv-field"><label class="cv-label">Date of birth</label><input class="cv-input" value="14 / 03 / 1989"></div><div class="cv-field"><label class="cv-label">BVN</label><input class="cv-input" value="22319048756"><span class="cv-hint">Checked against your bank record. We do not store it in full.</span></div><div class="cv-field"><label class="cv-label">NIN</label><input class="cv-input" placeholder=""><span class="cv-hint">Optional if BVN matches</span></div></div>
+  <div class="cv-row" style="justify-content:space-between;padding:12px 16px;border-radius:var(--radius-md);background:var(--surface-sunken)"><span class="cv-row"><i data-icon="user"></i>Selfie liveness check</span><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>Passed</span></div>
+ </div>
+ <div class="cv-card cv-stack" style="gap:20px"><h2 class="cv-h2">Business (KYB)</h2>
+  <div class="cv-form-grid"><div class="cv-field"><label class="cv-label">Registered name</label><input class="cv-input" value="Adire Atelier Limited"></div><div class="cv-field"><label class="cv-label">CAC number</label><input class="cv-input" value="RC 1849302"></div><div class="cv-field cv-span-2"><label class="cv-label">Business type</label><select class="cv-select"><option>Limited company</option></select></div></div>
+  <div class="cv-row" style="justify-content:space-between;padding:12px 16px;border:1px solid var(--line);border-radius:var(--radius-md);flex-wrap:nowrap"><span class="cv-row" style="flex-wrap:nowrap"><i data-icon="file"></i><span class="cv-small" style="font-weight:600">CAC certificate.pdf</span></span><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>Verified</span></div><div class="cv-row" style="justify-content:space-between;padding:12px 16px;border:1px solid var(--line);border-radius:var(--radius-md);flex-wrap:nowrap"><span class="cv-row" style="flex-wrap:nowrap"><i data-icon="file"></i><span class="cv-small" style="font-weight:600">Utility bill, Sep 2026.pdf</span></span><span class="cv-pill cv-pill-warning"><i data-icon="clock"></i>In review</span></div><div class="cv-row" style="justify-content:space-between;padding:12px 16px;border:1px solid var(--line);border-radius:var(--radius-md);flex-wrap:nowrap"><span class="cv-row" style="flex-wrap:nowrap"><i data-icon="file"></i><span class="cv-small" style="font-weight:600">Memorandum of association.pdf</span></span><span class="cv-pill cv-pill-danger"><i data-icon="x"></i>Unreadable, upload again</span></div>
+  <div class="cv-upload"><i data-icon="upload"></i><div style="margin-top:6px"><b style="color:var(--ink)">Upload a document</b> · PDF, JPG or PNG up to 10 MB. Encrypted at rest.</div></div>
+ </div>
+</div>
+<div class="cv-small cv-muted">Ghana vendors verify with Ghana Card; Kenya vendors with KRA PIN. Documents are kept for the statutory period under NDPA 2023, then deleted.</div></div></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

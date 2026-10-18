@@ -1,0 +1,12 @@
+<!-- @dsCard group="Money" height=110 -->
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>PriceTag — preview</title></head>
+<body>
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'cv-row',style:{gap:48,alignItems:'flex-start'}},h(C.PriceTag,{minor:4820,currency:'GBP',baseMinor:9800000,baseCurrency:'NGN',rate:'2,033.20'}),h(C.PriceTag,{minor:9800000,currency:'NGN'}),h(C.PriceTag,{size:'lg',minor:12600,currency:'USD',baseMinor:182500,baseCurrency:'GHS',rate:'14.48'})));
+</script>
+</body>
+</html>

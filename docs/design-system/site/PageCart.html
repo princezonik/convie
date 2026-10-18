@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Cart grouped by vendor · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<header class="cv-topnav"><a class="cv-wordmark" href="#">convie</a>
+<div class="cv-search" role="search"><i data-icon="search" data-size="sm"></i><span>Search products, vendors and categories</span></div>
+<div class="cv-topnav-actions"><span class="cv-locale"><i data-icon="globe" data-size="sm"></i>UK · GBP</span>
+<button class="cv-btn cv-btn-ghost"><i data-icon="store"></i>Sell on Convie</button>
+<button class="cv-btn cv-btn-ghost"><i data-icon="user"></i>Amara</button>
+<button class="cv-btn cv-btn-ghost cv-cart-btn" aria-label="Cart"><i data-icon="cart"></i><span class="cv-cart-count">4</span></button></div></header><main class="cv-page">
+<div class="cv-pagehead" style="margin-bottom:24px"><div><h1 class="cv-h1">Your cart</h1><div class="cv-muted">4 items from 2 vendors. Each vendor ships separately.</div></div></div>
+<div class="cv-split">
+ <div class="cv-stack" style="gap:20px">
+  <section class="cv-vgroup"><header class="cv-vgroup-head"><span class="cv-avatar">A</span><div style="flex:1"><div class="cv-h3">Adire Atelier</div><div class="cv-small cv-muted">Ships from Lagos, NG · 5 to 8 days to UK</div></div><a class="cv-link cv-small">Visit store</a></header>
+   <div class="cv-vgroup-line"><div class="cv-thumb"><div class="cv-art cv-art-c"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--info);opacity:.28"></div></div><div><div style="font-weight:600">Hand-dyed adire throw</div><div class="cv-small cv-muted">Indigo · 150 × 200 cm</div><a class="cv-link cv-small">Remove</a></div><div class="cv-qty"><button>−</button><span>1</span><button>+</button></div><div class="cv-price" style="text-align:right"><span class="cv-price-main">£48.20</span><span class="cv-price-base">₦98,000</span></div></div>
+   <div class="cv-vgroup-line"><div class="cv-thumb"><div class="cv-art cv-art-a"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--brand);opacity:.28"></div></div><div><div style="font-weight:600">Adire cushion cover</div><div class="cv-small cv-muted">Indigo · 45 cm</div><div class="cv-small" style="color:var(--warning)">Only 2 left</div></div><div class="cv-qty"><button>−</button><span>2</span><button>+</button></div><div class="cv-price" style="text-align:right"><span class="cv-price-main">£47.20</span><span class="cv-price-base">₦96,000</span></div></div>
+   <footer class="cv-vgroup-foot"><span>Shipping · Tracked international</span><span class="cv-num" style="color:var(--ink);font-weight:600">£12.50</span></footer></section>
+  <section class="cv-vgroup"><header class="cv-vgroup-head"><span class="cv-avatar">B</span><div style="flex:1"><div class="cv-h3">Bonwire Loom Co.</div><div class="cv-small cv-muted">Ships from Kumasi, GH · 6 to 10 days to UK</div></div><span class="cv-pill cv-pill-accent"><i data-icon="star"></i>New vendor</span></header>
+   <div class="cv-vgroup-line"><div class="cv-thumb"><div class="cv-art cv-art-b"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--accent);opacity:.28"></div></div><div><div style="font-weight:600">Kente stole, single weave</div><div class="cv-small cv-muted">Gold and green</div><a class="cv-link cv-small">Remove</a></div><div class="cv-qty"><button>−</button><span>1</span><button>+</button></div><div class="cv-price" style="text-align:right"><span class="cv-price-main">£36.50</span><span class="cv-price-base">GH₵725</span></div></div>
+   <footer class="cv-vgroup-foot"><span>Shipping · Standard international</span><span class="cv-num" style="color:var(--ink);font-weight:600">£9.90</span></footer></section>
+  <div class="cv-alert cv-alert-info"><i data-icon="info"></i><div><div class="cv-alert-title">Prices update until you start checkout.</div>At checkout we lock your rate for 15 minutes.</div></div>
+ </div>
+ <aside class="cv-card cv-sticky"><h2 class="cv-h2" style="margin-bottom:16px">Order summary</h2>
+  <div class="cv-summary"><div class="cv-summary-row"><span>Subtotal, 4 items</span><span>£131.90</span></div><div class="cv-summary-row"><span class="cv-muted">Shipping · Adire Atelier</span><span>£12.50</span></div><div class="cv-summary-row"><span class="cv-muted">Shipping · Bonwire Loom Co.</span><span>£9.90</span></div><div class="cv-summary-row"><span class="cv-muted">UK VAT</span><span>Calculated at checkout</span></div><div class="cv-summary-row cv-summary-total"><span>Total</span><span>£154.30</span></div><div class="cv-small cv-muted">Before VAT. Includes a 1.5% currency conversion.</div></div>
+  <button class="cv-btn cv-btn-primary cv-btn-lg cv-btn-block" style="margin-top:20px">Checkout<i data-icon="arrow"></i></button>
+  <div class="cv-row cv-small cv-muted" style="margin-top:12px;justify-content:center"><i data-icon="shield" data-size="sm"></i>Payment held until you confirm delivery</div></aside>
+</div></main><footer class="cv-footer"><span class="cv-wordmark">convie</span><span>Buyer protection · Payments by Paystack, Flutterwave and Stripe · Help</span><span>© 2026 Convie</span></footer>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

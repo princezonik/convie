@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alert · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"></head>
+<body>
+
+<div id="root" class="cv-root"></div>
+<script>
+  var C = window.Convie, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h('div',{className:'cv-stack',style:{gap:10,maxWidth:760}},h(C.Alert,{tone:'info',title:'Payouts run every Friday.'},'Funds become available 7 days after delivery, 14 days for new vendors.'),h(C.Alert,{tone:'success',title:'KYB approved.'},'Your payout account is connected.'),h(C.Alert,{tone:'warning',title:'2 listings awaiting review.'},'Your first 10 products are checked by our team within 24 hours.'),h(C.Alert,{tone:'danger',title:'Card declined by your bank.'},'Try another card or pay by bank transfer.')));
+</script>
+
+</body>
+</html>

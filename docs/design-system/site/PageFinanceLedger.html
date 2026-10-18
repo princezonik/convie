@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Double-entry ledger explorer · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-console"><nav class="cv-sidenav" aria-label="Finance navigation"><div class="cv-wordmark">convie<span class="cv-sidenav-role">Finance</span></div><a href="#" class="cv-navitem cv-navitem-on"><i data-icon="book"></i>Ledger</a><a href="#" class="cv-navitem"><i data-icon="refresh"></i>Reconciliation<span class="cv-count">2</span></a><a href="#" class="cv-navitem"><i data-icon="swap"></i>FX exposure</a><a href="#" class="cv-navitem"><i data-icon="wallet"></i>Payout runs</a><div class="cv-navsection">Reports</div><a href="#" class="cv-navitem"><i data-icon="file"></i>Tax</a><a href="#" class="cv-navitem"><i data-icon="download"></i>Statements</a>
+<div class="cv-nav-foot"><span class="cv-avatar">NO</span><div><div style="color:var(--ink);font-weight:600">Ngozi Okafor</div>Finance</div></div></nav>
+<div class="cv-main"><div class="cv-topbar"><div class="cv-search" style="max-width:420px"><i data-icon="search" data-size="sm"></i><span>Search orders, products, references</span></div><div style="margin-left:auto" class="cv-row"><span class="cv-locale"><i data-icon="clock" data-size="sm"></i>WAT · Sat 18 Oct</span></div></div>
+<div class="cv-content">
+<div class="cv-pagehead"><div><div class="cv-overline">Append-only · corrections are reversing entries</div><h1 class="cv-h1">Ledger</h1></div><div class="cv-row"><select class="cv-select" style="width:150px"><option>All currencies</option></select><button class="cv-btn cv-btn-secondary"><i data-icon="download"></i>Export CSV</button></div></div>
+<div class="cv-row"><span class="cv-chip cv-chip-on">Order CNV-24-08813 <i data-icon="x" data-size="sm"></i></span><span class="cv-chip">Type: any</span><span class="cv-chip">13 Oct 2026</span></div>
+<div class="cv-card cv-card-flush"><table class="cv-table"><thead><tr><th>Entry</th><th>Time</th><th>Account</th><th>Type</th><th class="cv-r">Debit</th><th class="cv-r">Credit</th><th>Ccy</th><th>Reference</th></tr></thead><tbody><tr><td><span class="cv-mono">LDG-7f3a91</span></td><td>09:13:01</td><td>gateway_clearing:flutterwave</td><td>capture</td><td class="cv-r cv-num">18,516</td><td class="cv-r cv-num"></td><td>GBP</td><td><span class="cv-mono">FLW-MOCK-88a1c2</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a92</span></td><td>09:13:01</td><td>buyer_payable</td><td>capture</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">18,516</td><td>GBP</td><td><span class="cv-mono">CNV-24-08813</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a93</span></td><td>09:13:01</td><td>vendor_pending:adire-atelier</td><td>vendor_share</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">17,848,000</td><td>NGN</td><td><span class="cv-mono">CNV-24-08813-A</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a94</span></td><td>09:13:01</td><td>revenue:commission</td><td>commission</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">1,552,000</td><td>NGN</td><td><span class="cv-mono">CNV-24-08813-A</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a95</span></td><td>09:13:01</td><td>vendor_pending:bonwire-loom</td><td>vendor_share</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">66,700</td><td>GHS</td><td><span class="cv-mono">CNV-24-08813-B</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a96</span></td><td>09:13:01</td><td>fx_position:GBP-NGN</td><td>fx_conversion</td><td class="cv-r cv-num">9,540</td><td class="cv-r cv-num"></td><td>GBP</td><td><span class="cv-mono">RT-2610-0912</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a97</span></td><td>09:13:01</td><td>expense:gateway_fees</td><td>gateway_fee</td><td class="cv-r cv-num">278</td><td class="cv-r cv-num"></td><td>GBP</td><td><span class="cv-mono">FLW-MOCK-88a1c2</span></td></tr><tr><td><span class="cv-mono">LDG-7f3a98</span></td><td>09:13:01</td><td>tax_payable:UK-VAT</td><td>tax</td><td class="cv-r cv-num"></td><td class="cv-r cv-num">3,086</td><td>GBP</td><td><span class="cv-mono">CNV-24-08813</span></td></tr></tbody></table><div class="cv-table-foot">Amounts in minor units. Entries balance per currency per transaction.</div></div></div></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

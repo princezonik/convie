@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Product editor with variants and price preview · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-console"><nav class="cv-sidenav" aria-label="Vendor navigation"><div class="cv-wordmark">convie<span class="cv-sidenav-role">Vendor</span></div><a href="#" class="cv-navitem"><i data-icon="grid"></i>Dashboard</a><a href="#" class="cv-navitem"><i data-icon="package"></i>Orders<span class="cv-count">7</span></a><a href="#" class="cv-navitem cv-navitem-on"><i data-icon="tag"></i>Products</a><a href="#" class="cv-navitem"><i data-icon="wallet"></i>Payouts</a><a href="#" class="cv-navitem"><i data-icon="scale"></i>Disputes<span class="cv-count">1</span></a><div class="cv-navsection">Account</div><a href="#" class="cv-navitem"><i data-icon="shield"></i>Verification</a><a href="#" class="cv-navitem"><i data-icon="store"></i>Store settings</a>
+<div class="cv-nav-foot"><span class="cv-avatar">AA</span><div><div style="color:var(--ink);font-weight:600">Adire Atelier</div>Lagos · NGN</div></div></nav>
+<div class="cv-main"><div class="cv-topbar"><div class="cv-search" style="max-width:420px"><i data-icon="search" data-size="sm"></i><span>Search orders, products, references</span></div><div style="margin-left:auto" class="cv-row"><span class="cv-locale"><i data-icon="clock" data-size="sm"></i>WAT · Sat 18 Oct</span></div></div>
+<div class="cv-content">
+<div class="cv-pagehead"><div><div class="cv-overline">Products / Edit</div><h1 class="cv-h1">Hand-dyed adire throw</h1></div><div class="cv-row"><span class="cv-pill cv-pill-success"><i data-icon="check"></i>Live</span><button class="cv-btn cv-btn-secondary">Preview</button><button class="cv-btn cv-btn-primary">Save changes</button></div></div>
+<div class="cv-split" style="grid-template-columns:1fr 360px">
+ <div class="cv-stack" style="gap:20px">
+  <div class="cv-card cv-stack" style="gap:20px"><h2 class="cv-h2">Details</h2>
+   <div class="cv-field"><label class="cv-label">Title</label><input class="cv-input" value="Hand-dyed adire throw"></div>
+   <div class="cv-field"><label class="cv-label">Description</label><textarea class="cv-input cv-textarea">Cotton, resist-dyed by hand with indigo in Abeokuta. Each piece varies slightly in pattern. Wash cold, dry in shade.</textarea></div>
+   <div class="cv-form-grid"><div class="cv-field"><label class="cv-label">Category</label><select class="cv-select"><option>Home &amp; living › Throws</option></select><span class="cv-hint">Commission for this category: 8%</span></div><div class="cv-field"><label class="cv-label">Weight</label><input class="cv-input" value="1.2 kg"><span class="cv-hint">Used for shipping quotes</span></div></div></div>
+  <div class="cv-card"><h2 class="cv-h2" style="margin-bottom:16px">Images</h2><div class="cv-row" style="flex-wrap:nowrap"><div class="cv-thumb" style="width:120px;height:120px;border-radius:var(--radius-lg)"><div class="cv-art cv-art-c"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--info);opacity:.28"></div></div><div class="cv-thumb" style="width:120px;height:120px;border-radius:var(--radius-lg)"><div class="cv-art cv-art-a"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--brand);opacity:.28"></div></div><div class="cv-thumb" style="width:120px;height:120px;border-radius:var(--radius-lg)"><div class="cv-art cv-art-b"></div><div class="cv-art-shape" style="width:46%;height:46%;left:27%;top:27%;background:var(--accent);opacity:.28"></div></div><div class="cv-upload" style="width:120px;height:120px;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center"><i data-icon="plus"></i><span class="cv-small">Add</span></div></div></div>
+  <div class="cv-card cv-card-flush"><div class="cv-card-head" style="padding:20px 24px 0"><h2 class="cv-h2">Variants</h2><button class="cv-btn cv-btn-secondary cv-btn-sm"><i data-icon="plus" data-size="sm"></i>Add option</button></div>
+   <table class="cv-table" style="margin-top:12px"><thead><tr><th>Variant</th><th>SKU</th><th class="cv-r">Price, NGN</th><th class="cv-r">Stock</th></tr></thead><tbody>
+   <tr><td><b>Indigo · 120 × 150</b></td><td><span class="cv-mono">ADR-THR-IND-120</span></td><td class="cv-r"><input class="cv-input cv-num" style="width:130px;height:32px;text-align:right" value="78,000.00"></td><td class="cv-r"><input class="cv-input cv-num" style="width:72px;height:32px;text-align:right" value="8"></td></tr><tr><td><b>Indigo · 150 × 200</b></td><td><span class="cv-mono">ADR-THR-IND-150</span></td><td class="cv-r"><input class="cv-input cv-num" style="width:130px;height:32px;text-align:right" value="98,000.00"></td><td class="cv-r"><input class="cv-input cv-num" style="width:72px;height:32px;text-align:right" value="4"></td></tr><tr><td><b>Rust · 150 × 200</b></td><td><span class="cv-mono">ADR-THR-RUS-150</span></td><td class="cv-r"><input class="cv-input cv-num" style="width:130px;height:32px;text-align:right" value="98,000.00"></td><td class="cv-r"><input class="cv-input cv-num" style="width:72px;height:32px;text-align:right" value="11"></td></tr><tr><td><b>Charcoal · 200 × 240</b></td><td><span class="cv-mono">ADR-THR-CHA-200</span></td><td class="cv-r"><input class="cv-input cv-num" style="width:130px;height:32px;text-align:right" value="124,000.00"></td><td class="cv-r"><input class="cv-input cv-num" style="width:72px;height:32px;text-align:right" value="8"></td></tr></tbody></table></div>
+ </div>
+ <aside class="cv-card cv-stack" style="gap:16px;position:sticky;top:24px"><h2 class="cv-h3">What buyers see</h2>
+  <div class="cv-small cv-muted">Today's quoted rates for Indigo · 150 × 200 (₦98,000.00). Buyers' prices include the 1.5% conversion spread.</div>
+  <table class="cv-table"><tbody><tr><td>Nigeria</td><td class="cv-r cv-num">₦98,000.00</td></tr><tr><td>Ghana</td><td class="cv-r cv-num">GH₵1,960.40</td></tr><tr><td>Kenya</td><td class="cv-r cv-num">Ksh 8,321.50</td></tr><tr><td>United Kingdom</td><td class="cv-r cv-num">£48.20</td></tr><tr><td>Eurozone</td><td class="cv-r cv-num">€55.90</td></tr><tr><td>United States</td><td class="cv-r cv-num">$61.25</td></tr></tbody></table>
+  <hr class="cv-divider" style="margin:0"><dl class="cv-kv" style="grid-template-columns:1fr auto"><dt>Commission (8%)</dt><dd class="cv-num">−₦7,840.00</dd><dt><b style="color:var(--ink)">You receive</b></dt><dd class="cv-num" style="color:var(--brand);font-weight:700">₦90,160.00</dd></dl></aside>
+</div></div></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>

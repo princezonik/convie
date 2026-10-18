@@ -1,0 +1,121 @@
+/* Convie — generated from tokens.json */
+:root, [data-theme="light"] {
+  --surface: #f7f5f0;
+  --surface-raised: #ffffff;
+  --surface-sunken: #efece4;
+  --surface-inverse: #14201b;
+  --ink: #14201b;
+  --ink-muted: #5b6560;
+  --ink-inverse: #f7f5f0;
+  --line: #ddd8cc;
+  --line-strong: #8c958f;
+  --brand: #0f6b4f;
+  --brand-hover: #0b5740;
+  --on-brand: #ffffff;
+  --brand-soft: #ddefe6;
+  --accent: #f2b33d;
+  --on-accent: #14201b;
+  --accent-soft: #fcefd3;
+  --danger: #b42318;
+  --danger-soft: #fbe4e1;
+  --warning: #8a4b00;
+  --warning-soft: #fbebd0;
+  --info: #1f5fad;
+  --info-soft: #e3edf9;
+  --focus: #1f5fad;
+  --scrim: rgba(20, 32, 27, 0.48);
+  --shadow-1: 0 1px 2px rgba(20, 32, 27, 0.06), 0 1px 1px rgba(20, 32, 27, 0.04);
+  --shadow-2: 0 8px 24px rgba(20, 32, 27, 0.12), 0 2px 6px rgba(20, 32, 27, 0.06);
+}
+[data-theme="dark"] {
+  --surface: #0f1513;
+  --surface-raised: #17201d;
+  --surface-sunken: #0b100e;
+  --surface-inverse: #eef0ea;
+  --ink: #eef0ea;
+  --ink-muted: #a3aca6;
+  --ink-inverse: #14201b;
+  --line: #2b3632;
+  --line-strong: #6b7872;
+  --brand: #3fb68b;
+  --brand-hover: #5cc79f;
+  --on-brand: #06140f;
+  --brand-soft: #12332a;
+  --accent: #f2b33d;
+  --on-accent: #14201b;
+  --accent-soft: #3a2e14;
+  --danger: #f27b6b;
+  --danger-soft: #3a1814;
+  --warning: #f0b04a;
+  --warning-soft: #3a2a10;
+  --info: #86b4f2;
+  --info-soft: #14253d;
+  --focus: #86b4f2;
+  --scrim: rgba(0, 0, 0, 0.64);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) {
+  --surface: #0f1513;
+  --surface-raised: #17201d;
+  --surface-sunken: #0b100e;
+  --surface-inverse: #eef0ea;
+  --ink: #eef0ea;
+  --ink-muted: #a3aca6;
+  --ink-inverse: #14201b;
+  --line: #2b3632;
+  --line-strong: #6b7872;
+  --brand: #3fb68b;
+  --brand-hover: #5cc79f;
+  --on-brand: #06140f;
+  --brand-soft: #12332a;
+  --accent: #f2b33d;
+  --on-accent: #14201b;
+  --accent-soft: #3a2e14;
+  --danger: #f27b6b;
+  --danger-soft: #3a1814;
+  --warning: #f0b04a;
+  --warning-soft: #3a2a10;
+  --info: #86b4f2;
+  --info-soft: #14253d;
+  --focus: #86b4f2;
+  --scrim: rgba(0, 0, 0, 0.64);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.6);
+} }
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --content-max: 1200px;
+  --sidenav-width: 248px;
+  --topbar-height: 64px;
+  --control-height: 40px;
+  --font-display: "Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+.display-xl { font-family: var(--font-display); font-size: 56px; line-height: 60px; font-weight: 700; letter-spacing: -0.02em; }
+.display-lg { font-family: var(--font-display); font-size: 40px; line-height: 44px; font-weight: 700; letter-spacing: -0.015em; }
+.heading-lg { font-family: var(--font-sans); font-size: 28px; line-height: 34px; font-weight: 600; letter-spacing: -0.01em; }
+.heading-md { font-family: var(--font-sans); font-size: 20px; line-height: 28px; font-weight: 600; }
+.heading-sm { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 600; }
+.body-lg { font-family: var(--font-sans); font-size: 17px; line-height: 26px; font-weight: 400; }
+.body { font-family: var(--font-sans); font-size: 15px; line-height: 22px; font-weight: 400; }
+.body-sm { font-family: var(--font-sans); font-size: 13px; line-height: 20px; font-weight: 400; }
+.label { font-family: var(--font-sans); font-size: 13px; line-height: 16px; font-weight: 600; letter-spacing: 0.01em; }
+.caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.02em; }
+.amount-lg { font-family: var(--font-sans); font-size: 32px; line-height: 36px; font-weight: 600; letter-spacing: -0.01em; }
+.amount { font-family: var(--font-sans); font-size: 17px; line-height: 24px; font-weight: 600; }
+.mono { font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400; }

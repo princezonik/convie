@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>Vendor approval queue with KYC review · Convie</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../components/bundle.css">
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../components/bundle.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=1280"></head>
+<body>
+
+<div class="cv-console"><nav class="cv-sidenav" aria-label="Admin navigation"><div class="cv-wordmark">convie<span class="cv-sidenav-role">Admin</span></div><a href="#" class="cv-navitem cv-navitem-on"><i data-icon="shield"></i>Vendor approvals<span class="cv-count">12</span></a><a href="#" class="cv-navitem"><i data-icon="tag"></i>Listing moderation<span class="cv-count">38</span></a><a href="#" class="cv-navitem"><i data-icon="search"></i>Order lookup</a><a href="#" class="cv-navitem"><i data-icon="scale"></i>Disputes<span class="cv-count">5</span></a><a href="#" class="cv-navitem"><i data-icon="pause"></i>Payout holds<span class="cv-count">3</span></a><div class="cv-navsection">Directory</div><a href="#" class="cv-navitem"><i data-icon="store"></i>Vendors</a><a href="#" class="cv-navitem"><i data-icon="user"></i>Buyers</a>
+<div class="cv-nav-foot"><span class="cv-avatar">TB</span><div><div style="color:var(--ink);font-weight:600">Tunde Bakare</div>Operations</div></div></nav>
+<div class="cv-main"><div class="cv-topbar"><div class="cv-search" style="max-width:420px"><i data-icon="search" data-size="sm"></i><span>Search orders, products, references</span></div><div style="margin-left:auto" class="cv-row"><span class="cv-locale"><i data-icon="clock" data-size="sm"></i>WAT · Sat 18 Oct</span></div></div>
+<div class="cv-content">
+<div class="cv-pagehead"><div><div class="cv-overline">12 waiting · oldest 19 hours</div><h1 class="cv-h1">Vendor approvals</h1></div><div class="cv-row"><select class="cv-select" style="width:160px"><option>All countries</option></select></div></div>
+<div class="cv-split-wide" style="grid-template-columns:1fr 480px">
+ <div class="cv-card cv-card-flush"><table class="cv-table"><thead><tr><th>Business</th><th>Country</th><th>Checks</th><th>Waiting</th><th></th></tr></thead><tbody><tr class="cv-selected"><td><b>Adire Atelier Ltd</b><div class="cv-small cv-muted">Textiles · applied 17 Oct</div></td><td>NG</td><td><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>BVN</span> <span class="cv-pill cv-pill-warning"><i data-icon="clock"></i>Docs</span></td><td>19 h</td><td><i data-icon="chevron"></i></td></tr><tr><td><b>Bonwire Loom Co.</b><div class="cv-small cv-muted">Textiles · applied 17 Oct</div></td><td>GH</td><td><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>Ghana Card</span></td><td>16 h</td><td><i data-icon="chevron"></i></td></tr><tr><td><b>Nyeri Highlands</b><div class="cv-small cv-muted">Food · applied 18 Oct</div></td><td>KE</td><td><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>KRA PIN</span></td><td>6 h</td><td><i data-icon="chevron"></i></td></tr><tr><td><b>Lekki Gadgets Hub</b><div class="cv-small cv-muted">Electronics · applied 18 Oct</div></td><td>NG</td><td><span class="cv-pill cv-pill-danger"><i data-icon="alert"></i>BVN mismatch</span></td><td>3 h</td><td><i data-icon="chevron"></i></td></tr></tbody></table></div>
+ <div class="cv-card cv-stack" style="gap:16px"><div class="cv-row" style="justify-content:space-between"><h2 class="cv-h2">Adire Atelier Ltd</h2><span class="cv-pill cv-pill-warning"><i data-icon="clock"></i>Awaiting review</span></div>
+  <dl class="cv-kv" style="grid-template-columns:140px 1fr"><dt>Owner</dt><dd>Folake Adeyemi</dd><dt>CAC</dt><dd><span class="cv-mono">RC 1849302</span></dd><dt>Settlement</dt><dd>NGN · GTBank ··6789</dd><dt>Gateway</dt><dd>Paystack subaccount <span class="cv-mono">ACCT_8x2k1</span></dd><dt>Category</dt><dd>Textiles (8%)</dd></dl>
+  <hr class="cv-divider" style="margin:0">
+  <div class="cv-row" style="justify-content:space-between"><span class="cv-small"><b>BVN match</b> · <span class="cv-muted">Name and DOB match</span></span><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>Verified</span></div><div class="cv-row" style="justify-content:space-between"><span class="cv-small"><b>Selfie liveness</b> · <span class="cv-muted">Passed</span></span><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>Verified</span></div><div class="cv-row" style="justify-content:space-between"><span class="cv-small"><b>CAC certificate</b> · <span class="cv-muted">Matches registry</span></span><span class="cv-pill cv-pill-success"><i data-icon="shield"></i>Verified</span></div><div class="cv-row" style="justify-content:space-between"><span class="cv-small"><b>Utility bill</b> · <span class="cv-muted">Needs a look</span></span><span class="cv-pill cv-pill-warning"><i data-icon="clock"></i>Awaiting review</span></div><div class="cv-row" style="justify-content:space-between"><span class="cv-small"><b>Memorandum</b> · <span class="cv-muted">Unreadable</span></span><span class="cv-pill cv-pill-danger"><i data-icon="x"></i>Rejected</span></div>
+  <div class="cv-field"><label class="cv-label">Note to vendor (required to reject)</label><textarea class="cv-input cv-textarea" style="min-height:72px">Please upload a clear copy of your memorandum of association.</textarea></div>
+  <div class="cv-row"><button class="cv-btn cv-btn-primary"><i data-icon="check"></i>Approve</button><button class="cv-btn cv-btn-secondary">Request changes</button><button class="cv-btn cv-btn-danger" style="margin-left:auto">Reject</button></div></div>
+</div></div></div></div>
+<script>window.Convie.hydrateIcons(document);</script>
+
+</body>
+</html>
